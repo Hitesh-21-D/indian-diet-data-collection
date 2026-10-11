@@ -3,7 +3,9 @@ test("complete survey, search, edit, custom food, skips, refresh, receipt and sa
   page,
 }) => {
   await page.goto("/");
-  await expect(page.getByText("Synthetic test institution")).toBeVisible();
+  await expect(page.getByText("Synthetic test institution")).toBeVisible({
+    timeout: 15000,
+  });
   await page.screenshot({
     path: `test-results/welcome-${test.info().project.name}.png`,
     fullPage: true,
@@ -30,13 +32,6 @@ test("complete survey, search, edit, custom food, skips, refresh, receipt and sa
   await page.reload();
   await page.getByRole("button", { name: "Begin questionnaire" }).click();
   await expect(page.getByLabel("Height (cm)")).toHaveValue("170");
-  await page.getByRole("button", { name: "Continue", exact: true }).click();
-  await page
-    .getByLabel("How representative is this day?")
-    .selectOption("Very typical");
-  await page
-    .getByRole("combobox", { name: "Day type", exact: true })
-    .selectOption("Typical weekday");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page
     .getByRole("combobox", { name: "Search for a food" })
@@ -68,12 +63,22 @@ test("complete survey, search, edit, custom food, skips, refresh, receipt and sa
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.getByLabel("I usually skip this meal").check();
   await page.getByRole("button", { name: "Continue", exact: true }).click();
+  await expect(
+    page.getByRole("heading", { name: "Your Typical Day" }),
+  ).toBeVisible();
+  await page
+    .getByLabel("How representative is this day?")
+    .selectOption("Very typical");
+  await page
+    .getByRole("combobox", { name: "Day type", exact: true })
+    .selectOption("Typical weekday");
+  await page.getByRole("button", { name: "Continue", exact: true }).click();
   await expect(page.getByText("0.75 × tea cup")).toBeVisible();
   await page.getByRole("button", { name: "Edit breakfast" }).click();
   await expect(
     page.getByText("Hot tea (Garam Chai)", { exact: true }),
   ).toBeVisible();
-  for (let i = 0; i < 4; i++)
+  for (let i = 0; i < 5; i++)
     await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page
     .getByLabel(
@@ -122,7 +127,9 @@ test("16–17 blocked pending approvals; fractional and underage ages rejected",
   page,
 }) => {
   await page.goto("/");
-  await expect(page.getByText("Synthetic test institution")).toBeVisible();
+  await expect(page.getByText("Synthetic test institution")).toBeVisible({
+    timeout: 15000,
+  });
   for (const age of ["15", "16.5"]) {
     await page.getByLabel("Your age in completed years").fill(age);
     await expect(

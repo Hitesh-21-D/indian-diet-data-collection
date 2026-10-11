@@ -170,6 +170,10 @@ main {
   font-size: 13px;
   color: var(--muted);
 }
+.steps li > span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 .step-number {
   font-size: 11px;
   border: 1px solid var(--border);
@@ -463,9 +467,19 @@ select[aria-invalid="true"] {
   border-bottom: 1px solid var(--border);
 }
 .instruction-list span {
+  flex: 0 0 2ch;
+  white-space: nowrap;
+  overflow-wrap: normal;
   color: #7a8d7d;
   font-size: 11px;
   padding-top: 3px;
+}
+.meal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
 }
 .skip {
   background: #f7f6f2;
@@ -880,7 +894,9 @@ footer {
   }
 }
 @media (max-width: 380px) {
-  .choice-grid { grid-template-columns: minmax(0, 1fr); }
+  .choice-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   * {

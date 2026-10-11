@@ -16,7 +16,6 @@ import {
 } from "firebase/firestore";
 import {
   eligibilityError,
-  mealKeys,
   policySchema,
   responseSchema,
   validateCatalogEntries,
@@ -134,7 +133,7 @@ export async function submitResponse(
     createdAt: serverTimestamp(),
     consent: { ...data.consent, timestamp: serverTimestamp() },
   });
-  for (const key of mealKeys)
+  for (const key of data.mealOrder)
     batch.set(doc(db!, "submissions", uid, "meals", key), {
       ...meals[key],
       createdAt: serverTimestamp(),

@@ -17,8 +17,8 @@ service cloud.firestore {
           : (f.source == 'CUSTOM' && f.keys().hasOnly(['source','foodCode','name','unit','quantity','brand','preparation']) && f.foodCode == null && f.brand.matches('(?s).{0,100}') && f.preparation.matches('(?s).{0,300}')));
     }
     function itemAt(items, i) { return items.size() <= i || food(items[i]); }
-    function meal(m) {
-      return fields(m, ['skipped','entries','createdAt']) && m.createdAt == request.time && m.skipped is bool && m.entries is list && m.entries.size() <= 8
+    function meal(m, version) {
+      return (version == 3 ? (fields(m, ['label','skipped','entries','createdAt']) && text(m.label,80)) : fields(m, ['skipped','entries','createdAt'])) && m.createdAt == request.time && m.skipped is bool && m.entries is list && m.entries.size() <= 8
         && (m.skipped ? m.entries.size() == 0 : m.entries.size() > 0)
         && itemAt(m.entries,0) && itemAt(m.entries,1) && itemAt(m.entries,2) && itemAt(m.entries,3) && itemAt(m.entries,4)
         && itemAt(m.entries,5) && itemAt(m.entries,6) && itemAt(m.entries,7);
@@ -56,26 +56,45 @@ service cloud.firestore {
       let cfg = policy();
       return cfg.collectionEnabled == true && text(cfg.institution,200) && text(cfg.contactEmail,200)
         && text(cfg.retention,500) && text(cfg.withdrawal,1000) && text(cfg.ethicsStatus,500) && text(cfg.consentVersion,100)
-        && fields(d,['responseId','ownerUid','consent','profile','dayRepresentativeness','dayType','catalogVersion','schemaVersion','createdAt','accurate'])
-        && d.responseId == uid && d.ownerUid == uid && d.schemaVersion == 2 && d.createdAt == request.time && d.accurate == true
+        && (d.schemaVersion == 2 ? fields(d,['responseId','ownerUid','consent','profile','dayRepresentativeness','dayType','catalogVersion','schemaVersion','createdAt','accurate'])
+          : (d.schemaVersion == 3 && fields(d,['responseId','ownerUid','consent','profile','dayRepresentativeness','dayType','catalogVersion','schemaVersion','createdAt','accurate','mealOrder']) && validMealOrder(d.mealOrder)))
+        && d.responseId == uid && d.ownerUid == uid && d.createdAt == request.time && d.accurate == true
         && d.catalogVersion == cfg.catalogVersion && profile(d.profile) && consent(d.consent,d.profile.age,uid,cfg)
         && d.dayRepresentativeness in ['Very typical','Mostly typical','Somewhat typical','Unusual']
         && d.dayType in ['Typical weekday','Typical weekend','Both are similar'];
     }
+    function validMealOrder(ids) {
+      return ids is list && ids.size() >= 1 && ids.size() <= 8 && ids.toSet().size() == ids.size()
+        && ids.hasOnly(['breakfast','lunch','snacks','dinner','extra1','extra2','extra3','extra4']);
+    }
     function mealCreated(uid, name) { return getAfter(/databases/$(database)/documents/submissions/$(uid)/meals/$(name)).data.createdAt == request.time; }
+    function orderedMealCreated(uid, ids, index) { return ids.size() <= index || mealCreated(uid,ids[index]); }
+    function completeMeals(uid) {
+      let d = getAfter(/databases/$(database)/documents/submissions/$(uid)).data;
+      // Receipt validation shares the atomic completeness checks, keeping each
+      // operation below Firestore's 10-document access limit, even for minors.
+      return d.schemaVersion == 2 || (validMealOrder(d.mealOrder)
+        && orderedMealCreated(uid,d.mealOrder,0) && orderedMealCreated(uid,d.mealOrder,1)
+        && orderedMealCreated(uid,d.mealOrder,2) && orderedMealCreated(uid,d.mealOrder,3)
+        && orderedMealCreated(uid,d.mealOrder,4) && orderedMealCreated(uid,d.mealOrder,5)
+        && orderedMealCreated(uid,d.mealOrder,6) && orderedMealCreated(uid,d.mealOrder,7));
+    }
     match /study/config { allow get: if true; allow list, write: if false; }
     match /minorEligibility/{uid} { allow get: if own(uid); allow list, write: if false; }
     match /submissions/{uid} {
       allow create: if own(uid) && validSubmission(request.resource.data, uid)
-        && mealCreated(uid,'breakfast') && mealCreated(uid,'lunch') && mealCreated(uid,'snacks') && mealCreated(uid,'dinner')
+        && (request.resource.data.schemaVersion == 3 || (mealCreated(uid,'breakfast') && mealCreated(uid,'lunch') && mealCreated(uid,'snacks') && mealCreated(uid,'dinner')))
         && getAfter(/databases/$(database)/documents/receipts/$(uid)).data.responseId == uid
         && getAfter(/databases/$(database)/documents/receipts/$(uid)).data.createdAt == request.time;
       allow read, update, delete: if false;
       match /meals/{name} {
-        allow create: if own(uid) && name in ['breakfast','lunch','snacks','dinner']
+        allow create: if own(uid)
           && !exists(/databases/$(database)/documents/submissions/$(uid))
           && getAfter(/databases/$(database)/documents/submissions/$(uid)).data.createdAt == request.time
-          && meal(request.resource.data);
+          && (getAfter(/databases/$(database)/documents/submissions/$(uid)).data.schemaVersion == 3
+            ? name in getAfter(/databases/$(database)/documents/submissions/$(uid)).data.mealOrder
+            : name in ['breakfast','lunch','snacks','dinner'])
+          && meal(request.resource.data,getAfter(/databases/$(database)/documents/submissions/$(uid)).data.schemaVersion);
         allow read, update, delete: if false;
       }
     }
@@ -84,7 +103,8 @@ service cloud.firestore {
       allow create: if own(uid) && fields(request.resource.data,['responseId','createdAt'])
         && request.resource.data.responseId == uid && request.resource.data.createdAt == request.time
         && !exists(/databases/$(database)/documents/submissions/$(uid))
-        && getAfter(/databases/$(database)/documents/submissions/$(uid)).data.ownerUid == uid;
+        && getAfter(/databases/$(database)/documents/submissions/$(uid)).data.ownerUid == uid
+        && completeMeals(uid);
       allow list, update, delete: if false;
     }
     match /{document=**} { allow read, write: if false; }

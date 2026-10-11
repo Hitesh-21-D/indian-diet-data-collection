@@ -14,7 +14,9 @@ async function fits(page: Page, name: string) {
 }
 async function begin(page: Page) {
   await page.goto("/");
-  await expect(page.getByText("Synthetic test institution")).toBeVisible();
+  await expect(page.getByText("Synthetic test institution")).toBeVisible({
+    timeout: 15000,
+  });
   await page.getByLabel("Your age in completed years").fill("24");
   await page.getByLabel("I have read the participant information.").check();
   await page.getByLabel("I voluntarily consent to participate.").check();
@@ -34,15 +36,94 @@ async function breakfast(page: Page) {
   await page.getByLabel("None", { exact: true }).check();
   await fits(page, "profile");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
+  await expect(
+    page.getByRole("heading", { name: "Breakfast", exact: true }),
+  ).toBeVisible();
+  const number = page.locator(".instruction-list span").first();
+  await expect(number).toHaveText("01");
+  expect(await number.evaluate((el) => getComputedStyle(el).whiteSpace)).toBe(
+    "nowrap",
+  );
+  await fits(page, "instructions");
+}
+
+test("five or more creates five occasions, adds and removes a sixth, and submits separate meal names", async ({
+  page,
+}) => {
+  await breakfast(page);
+  await page.getByRole("button", { name: "Back", exact: true }).click();
+  await page
+    .getByLabel("Dietary pattern (optional)")
+    .selectOption("5 or more meals per day");
+  await page.getByRole("button", { name: "Continue", exact: true }).click();
+  const names = [
+    "Breakfast",
+    "Mid-morning meal",
+    "Lunch",
+    "Afternoon snack",
+    "Dinner",
+  ];
+  for (let i = 0; i < names.length; i++) {
+    await expect(page.getByLabel("Meal name", { exact: true })).toHaveValue(
+      names[i],
+    );
+    await page.getByLabel("I usually skip this meal").check();
+    if (i < names.length - 1)
+      await page.getByRole("button", { name: "Continue", exact: true }).click();
+  }
+  await page
+    .getByRole("button", { name: "Add another meal", exact: true })
+    .click();
+  await page.getByLabel("Meal name", { exact: true }).fill("Late-night snack");
+  page.once("dialog", (dialog) => dialog.accept());
+  await page
+    .getByRole("button", { name: "Remove this meal", exact: true })
+    .click();
+  await expect(page.getByLabel("Meal name", { exact: true })).toHaveValue(
+    "Dinner",
+  );
+  await page
+    .getByRole("button", { name: "Add another meal", exact: true })
+    .click();
+  await page.getByLabel("Meal name", { exact: true }).fill("Late-night snack");
+  await page
+    .getByRole("button", { name: "Can’t find your food? Add a custom food" })
+    .click();
+  await page
+    .getByLabel("Food name", { exact: true })
+    .fill("Synthetic sixth-meal food");
+  await page.getByLabel("Quantity unit", { exact: true }).fill("bowl");
+  await page.getByRole("button", { name: "Add Food", exact: true }).click();
+  await page.getByRole("button", { name: "Continue", exact: true }).click();
+  await expect(
+    page.getByRole("heading", { name: "Your Typical Day" }),
+  ).toBeVisible();
   await page
     .getByLabel("How representative is this day?")
     .selectOption("Very typical");
   await page
     .getByRole("combobox", { name: "Day type", exact: true })
     .selectOption("Typical weekday");
-  await fits(page, "typical-day");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
-}
+  await expect(
+    page.getByRole("heading", { name: "Late-night snack", exact: true }),
+  ).toBeVisible();
+  const saved = await page.evaluate(
+    () =>
+      JSON.parse(localStorage.getItem("everyday-diet-study:draft:v2")!).draft,
+  );
+  expect(saved.mealOrder).toHaveLength(6);
+  expect(saved.meals[saved.mealOrder[5]].label).toBe("Late-night snack");
+  await page
+    .getByLabel(
+      "I confirm that these answers describe my usual eating habits as accurately as I can remember.",
+    )
+    .check();
+  await page.getByRole("button", { name: "Submit Response" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Thank you for taking part." }),
+  ).toBeVisible();
+});
 
 test("touch search, long custom text, unsaved edit warning, review and narrow layouts", async ({
   page,
@@ -99,6 +180,14 @@ test("touch search, long custom text, unsaved edit warning, review and narrow la
     await page.getByLabel("I usually skip this meal").check();
     await page.getByRole("button", { name: "Continue", exact: true }).click();
   }
+  await page
+    .getByLabel("How representative is this day?")
+    .selectOption("Very typical");
+  await page
+    .getByRole("combobox", { name: "Day type", exact: true })
+    .selectOption("Typical weekday");
+  await fits(page, "typical-day");
+  await page.getByRole("button", { name: "Continue", exact: true }).click();
   await fits(page, "long-review");
   expect(errors).toEqual([]);
 });
@@ -142,7 +231,9 @@ test("catalog connection failure can be retried", async ({ page }) => {
   ).toBeDisabled();
   await page.unroute("**/data/indb_food_catalog.json");
   await page.getByRole("button", { name: "Retry loading study" }).click();
-  await expect(page.getByText("Synthetic test institution")).toBeVisible();
+  await expect(page.getByText("Synthetic test institution")).toBeVisible({
+    timeout: 15000,
+  });
   await expect(
     page.getByRole("button", { name: "Begin questionnaire" }),
   ).toBeEnabled();

@@ -179,6 +179,10 @@ describe("participant security", () => {
         expiresAt: Timestamp.fromMillis(Date.now() + 3600000),
       }),
     );
+    for (const key of ["extra1", "extra2", "extra3", "extra4"] as const) {
+      d.mealOrder.push(key);
+      d.meals[key] = { label: key, skipped: true, entries: [] };
+    }
     await assertSucceeds(commit(client(), d));
   });
   it("rejects unknown fields, malformed nested entries, unsupported sex and empty meals", async () => {
@@ -229,10 +233,16 @@ describe("participant security", () => {
     badLast.meals.breakfast.entries[7].quantity = 0;
     await assertFails(commit(client(), badLast));
   });
-  it.each([1, 4])(
+  it.each([1, 4, 8])(
     "accepts maximum bounded entries across %s meals",
     async (count) => {
       const d = payload();
+      if (count === 8) {
+        for (const key of ["extra1", "extra2", "extra3", "extra4"] as const) {
+          d.mealOrder.push(key);
+          d.meals[key] = { label: key, skipped: true, entries: [] };
+        }
+      }
       for (const m of Object.values(d.meals).slice(0, count)) {
         m.skipped = false;
         m.entries = Array.from({ length: 8 }, () => ({
@@ -248,4 +258,29 @@ describe("participant security", () => {
       await assertSucceeds(commit(client(), d));
     },
   );
+  it("retains schema v2 compatibility for an already-open old questionnaire", async () => {
+    const d = payload();
+    const legacy: Record<string, unknown> = Object.fromEntries(
+      Object.entries(d).filter(([key]) => key !== "mealOrder"),
+    );
+    legacy.meals = Object.fromEntries(
+      Object.entries(d.meals).map(([key, value]) => [
+        key,
+        { skipped: value.skipped, entries: value.entries },
+      ]),
+    );
+    await assertSucceeds(commit(client(), { ...legacy, schemaVersion: 2 }));
+  });
+  it("rejects missing, duplicate, foreign and unlisted eating occasions", async () => {
+    const d = payload();
+    await assertFails(
+      commit(client(), { ...d, mealOrder: [...d.mealOrder, "extra1"] }),
+    );
+    await assertFails(
+      commit(client(), { ...d, mealOrder: ["breakfast", "breakfast"] }),
+    );
+    await assertFails(commit(client(), { ...d, mealOrder: ["unknown"] }));
+    await assertFails(commit(client(), { ...d, mealOrder: ["breakfast"] }));
+    await assertFails(commit(client(), { ...d, mealOrder: [] }));
+  });
 });

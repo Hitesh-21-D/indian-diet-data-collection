@@ -13,6 +13,30 @@ def record():
     return {'schemaVersion':2,'responseId':'synthetic','catalogVersion':catalog['version'],'consent':{'version':'test','assent':False},'profile':{'age':101,'sex':'female'},'meals':{'breakfast':{'skipped':False,'entries':[{'source':'INDB','foodCode':'ASC001','name':'Hot tea (Garam Chai)','quantity':1.25,'unit':'tea cup'},{'source':'CUSTOM','foodCode':None,'name':'=danger()','quantity':.5,'unit':'cup','brand':'','preparation':''}]},**{m:{'skipped':True,'entries':[]} for m in ['lunch','snacks','dinner']}}}
 
 class PipelineTests(unittest.TestCase):
+    def test_separate_occasions_export_with_legacy_compatibility(self):
+        r = record()
+        r['schemaVersion'] = 3
+        r['mealOrder'] = ['breakfast', 'extra1', 'lunch', 'snacks', 'dinner', 'extra2']
+        for key, meal in r['meals'].items(): meal['label'] = key.title()
+        r['meals']['extra1'] = {'label': 'Mid-morning meal', 'skipped': True, 'entries': []}
+        r['meals']['extra2'] = {'label': 'Late-night snack', 'skipped': False, 'entries': [dict(r['meals']['breakfast']['entries'][1])]}
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp)
+            report = export_records([('synthetic', r)], path)
+            self.assertEqual(report['participants'], 1)
+            self.assertEqual(report['food_logs'], 3)
+            with (path/'participants.csv').open(encoding='utf-8') as f:
+                p = list(csv.DictReader(f))[0]
+                self.assertEqual(p['schema_version'], '3')
+                self.assertEqual(p['meal_count'], '6')
+                self.assertIn('Late-night snack', p['meal_labels'])
+            with (path/'food_logs.csv').open(encoding='utf-8') as f:
+                rows = list(csv.DictReader(f))
+                self.assertEqual(rows[-1]['meal_index'], '5')
+                self.assertEqual(rows[-1]['meal_label'], 'Late-night snack')
+            r['mealOrder'].append('extra2')
+            self.assertEqual(export_records([('synthetic', r)], path)['rejected'], 1)
+
     def test_export_and_strict_join(self):
         with tempfile.TemporaryDirectory() as tmp:
             path=Path(tmp)

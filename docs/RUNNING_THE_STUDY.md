@@ -4,7 +4,7 @@ The active configuration on 11 October 2026 is adult-only: `collectionEnabled=tr
 
 ## Before recruitment
 
-Push the readiness fixes, wait for **Verify study**, then manually run **Deploy GitHub Pages** on `main`. Open the deployed questionnaire on the phones you expect participants to use. Browser automation covers Chromium and WebKit at desktop, tablet and phone sizes, including 320 CSS pixels; it cannot simulate every physical keyboard or device setting.
+For the separate-occasion update, first deploy the backward-compatible rules with `npx firebase deploy --only firestore:rules --project indian-diet-research`. Then push the fixes, wait for **Verify study**, and manually run **Deploy GitHub Pages** on `main`. Open the deployed questionnaire on the phones you expect participants to use. Browser automation covers Chromium and WebKit at desktop, tablet and phone sizes, including 320 CSS pixels; it cannot simulate every physical keyboard or device setting.
 
 Use the final study URL: https://hitesh-21-d.github.io/indian-diet-data-collection/. Invite adults aged 18 and above. Use only the consent wording, indefinite retention and seven-day withdrawal procedure covered by your approved protocol. Collection for ages 16–17 remains closed. Preserve the original workbook, exclusion report, catalog version and consent versions for reproducibility.
 
@@ -32,7 +32,7 @@ Keep snapshots in institution-approved, access-controlled storage. `exports/` is
 
 Monitor both study contact mailboxes. For a request within seven days, use the supplied response reference to identify the exact record and check its `createdAt` timestamp. Never ask participants to put their names or medical information in the survey.
 
-An authorized researcher should delete that reference's four meal documents under `submissions/{reference}/meals`, then the parent `submissions/{reference}`, and its `receipts/{reference}` document. A parent deletion alone does not delete subcollections. Also remove the reference from retained exports, joined analysis files and backups according to the approved procedure. Keep a minimal restricted processing log outside the public repository. Do not delete any other participant's record.
+An authorized researcher should delete **all** that reference's occasion documents under `submissions/{reference}/meals` (1–8 for version 3, four for legacy records), then the parent `submissions/{reference}`, and its `receipts/{reference}` document. A parent deletion alone does not delete subcollections. Also remove the reference from retained exports, joined analysis files and backups according to the approved procedure. Keep a minimal restricted processing log outside the public repository. Do not delete any other participant's record.
 
 ## Monitor or pause collection
 

@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import {
   ageSchema,
+  blankDraft,
+  configureMealPattern,
   eligibilityError,
   entrySchema,
   mealSchema,
@@ -50,6 +52,27 @@ describe("age and nutritional sex field", () => {
   });
 });
 describe("foods and meals", () => {
+  it("creates the selected number of occasions and preserves food when changed", () => {
+    for (const [pattern, count] of [
+      ["2 meals per day", 2],
+      ["3 meals per day", 3],
+      ["4 meals per day", 4],
+      ["5 or more meals per day", 5],
+    ] as const) {
+      expect(
+        configureMealPattern(blankDraft(), pattern).mealOrder,
+      ).toHaveLength(count);
+    }
+    const d = configureMealPattern(response(), "5 or more meals per day");
+    d.meals.extra1.entries = [...d.meals.breakfast.entries];
+    const changed = configureMealPattern(d, "2 meals per day");
+    expect(changed.mealOrder).toContain("extra1");
+    expect(changed.meals.extra1.entries).toHaveLength(1);
+    expect(
+      responseSchema.safeParse({ ...response(), mealOrder: ["breakfast"] })
+        .success,
+    ).toBe(false);
+  });
   it.each([0.01, 0.25, 0.75, 1.33, 100])("accepts quantity %s", (n) =>
     expect(quantitySchema.safeParse(n).success).toBe(true),
   );
@@ -137,5 +160,22 @@ describe("draft retention", () => {
       100,
     );
     expect(readDraft(s, 101).profile.age).toBeUndefined();
+  });
+  it("migrates old four-meal drafts without losing food", () => {
+    const s = storage();
+    const legacy = JSON.parse(JSON.stringify(response()));
+    legacy.schemaVersion = 2;
+    delete legacy.mealOrder;
+    for (const meal of Object.values(legacy.meals) as { label?: string }[])
+      delete meal.label;
+    s.setItem(
+      "everyday-diet-study:draft:v2",
+      JSON.stringify({ expires: 100 + RETENTION_MS, draft: legacy }),
+    );
+    const restored = readDraft(s, 101);
+    expect(restored.schemaVersion).toBe(3);
+    expect(restored.mealOrder).toHaveLength(4);
+    expect(restored.meals.breakfast.entries[0].quantity).toBe(1.25);
+    expect(restored.accurate).toBe(false);
   });
 });

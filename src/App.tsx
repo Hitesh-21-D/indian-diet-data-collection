@@ -18,9 +18,9 @@ import {
   diets,
   eligibilityError,
   goals,
-  mealKeys,
-  mealLabels,
-  mealSchema,
+  configureMealPattern,
+  occasionKeys,
+  occasionSchema,
   minorPolicyReady,
   patterns,
   profileSchema,
@@ -40,19 +40,19 @@ import {
 import { DRAFT_KEY, readDraft, saveDraft } from "./draft";
 import { withTimeout } from "./timeout";
 
-const steps = [
-  "Welcome & Consent",
-  "Personal Profile",
-  "Your Typical Day",
-  "Breakfast",
-  "Lunch",
-  "Snacks & Beverages",
-  "Dinner",
-  "Review",
-];
 export default function App() {
   const [draft, setDraft] = useState<Draft>(readDraft);
   const [step, setStep] = useState(0);
+  const dayStep = 2 + draft.mealOrder.length;
+  const reviewStep = dayStep + 1;
+  const mealKey = draft.mealOrder[step - 2];
+  const steps = [
+    "Welcome & Consent",
+    "Personal Profile",
+    ...draft.mealOrder.map((key) => draft.meals[key].label || "Unnamed meal"),
+    "Your Typical Day",
+    "Review",
+  ];
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [policy, setPolicy] = useState<StudyPolicy | null>(null);
   const [setupError, setSetupError] = useState("");
@@ -140,6 +140,12 @@ export default function App() {
     key: K,
     value: Profile[K] | undefined,
   ) {
+    if (key === "pattern") {
+      setDraft((d) =>
+        configureMealPattern(d, (value || "") as Profile["pattern"]),
+      );
+      return;
+    }
     setDraft((d) => ({
       ...d,
       accurate: false,
@@ -206,12 +212,12 @@ export default function App() {
         return;
       }
     }
-    if (step === 2 && (!draft.dayType || !draft.dayRepresentativeness)) {
+    if (step === dayStep && (!draft.dayType || !draft.dayRepresentativeness)) {
       setError("Select how typical your day is and its day type.");
       return;
     }
-    if (step >= 3 && step <= 6) {
-      const selectedMeal = draft.meals[mealKeys[step - 3]];
+    if (step >= 2 && step < dayStep) {
+      const selectedMeal = draft.meals[mealKey];
       if (
         selectedMeal.entries.some(
           (entry) =>
@@ -229,7 +235,7 @@ export default function App() {
         );
         return;
       }
-      const result = mealSchema.safeParse(draft.meals[mealKeys[step - 3]]);
+      const result = occasionSchema.safeParse(selectedMeal);
       if (!result.success) {
         setError(result.error.issues[0].message);
         return;
@@ -387,7 +393,7 @@ export default function App() {
               <ol className="steps">
                 {steps.map((s, i) => (
                   <li
-                    key={s}
+                    key={i}
                     className={
                       step === i ? "current" : step > i ? "complete" : ""
                     }
@@ -815,31 +821,24 @@ export default function App() {
                         activities,
                       )}
                     </div>
+                    <p className="hint">
+                      Count snacks or drinks taken at separate times as eating
+                      occasions. Your dietary pattern sets the starting number
+                      of meals. You can rename or remove them and add more after
+                      the last meal. Changing this answer keeps meals with foods
+                      already entered.
+                    </p>
                   </>
                 )}
-                {step === 2 && (
+                {step === dayStep && (
                   <>
-                    <p className="lead">Think of an ordinary day.</p>
-                    <div className="instruction-list">
-                      <p>
-                        <span>01</span>Please describe what you would normally
-                        eat and drink on a typical day, rather than a special
-                        occasion or an unusually different day.
-                      </p>
-                      <p>
-                        <span>02</span>Include foods, snacks, tea, coffee, milk,
-                        juices, and other calorie-containing beverages.
-                      </p>
-                      <p>
-                        <span>03</span>Select the closest matching food from the
-                        list and enter the amount normally consumed.
-                      </p>
-                      <p>
-                        <span>04</span>Do not change your answers based on what
-                        you think is healthy. We are interested in your existing
-                        habits.
-                      </p>
-                    </div>
+                    <p className="lead">
+                      Think about the day you just described.
+                    </p>
+                    <p className="muted">
+                      Now that you have entered your foods and drinks, tell us
+                      how closely they reflect your usual eating habits.
+                    </p>
                     <label>
                       How representative is this day?
                       <select
@@ -878,32 +877,162 @@ export default function App() {
                     </label>
                   </>
                 )}
-                {step >= 3 && step <= 6 && (
+                {step >= 2 && step < dayStep && (
                   <>
+                    {step === 2 && (
+                      <div
+                        className="instruction-list"
+                        aria-label="Food entry instructions"
+                      >
+                        <p>
+                          <span>01</span>Describe what you normally eat and
+                          drink on an ordinary day, rather than a special
+                          occasion.
+                        </p>
+                        <p>
+                          <span>02</span>Include snacks, tea, coffee, milk,
+                          juices, and other calorie-containing drinks.
+                        </p>
+                        <p>
+                          <span>03</span>Select the closest matching recipe and
+                          enter the amount you normally consume.
+                        </p>
+                        <p>
+                          <span>04</span>Describe your existing habits. Do not
+                          change your answers to match what you think is
+                          healthy.
+                        </p>
+                      </div>
+                    )}
                     <p className="lead">
                       What do you usually have for{" "}
-                      {mealLabels[mealKeys[step - 3]].toLowerCase()}?
+                      {draft.meals[mealKey].label.toLowerCase() || "this meal"}?
                     </p>
                     <p className="muted">
                       Add each food and drink, including accompaniments.
                       Household units come from the food dataset.
                     </p>
+                    <label htmlFor="meal-name">
+                      Meal name
+                      <input
+                        id="meal-name"
+                        aria-describedby="meal-name-hint"
+                        value={draft.meals[mealKey].label}
+                        maxLength={80}
+                        onChange={(e) =>
+                          setDraft((d) => ({
+                            ...d,
+                            accurate: false,
+                            meals: {
+                              ...d.meals,
+                              [mealKey]: {
+                                ...d.meals[mealKey],
+                                label: e.target.value,
+                              },
+                            },
+                          }))
+                        }
+                      />
+                    </label>
+                    <p className="hint" id="meal-name-hint">
+                      Use a name such as breakfast, afternoon snack, or
+                      late-night meal. Record each eating occasion separately.
+                    </p>
                     <FoodEditor
-                      key={step}
+                      key={mealKey}
                       foods={catalog?.foods || []}
-                      value={draft.meals[mealKeys[step - 3]]}
+                      value={draft.meals[mealKey]}
                       onPendingChange={setPendingFood}
                       onChange={(meal) =>
                         setDraft((d) => ({
                           ...d,
                           accurate: false,
-                          meals: { ...d.meals, [mealKeys[step - 3]]: meal },
+                          meals: {
+                            ...d.meals,
+                            [mealKey]: { ...d.meals[mealKey], ...meal },
+                          },
                         }))
                       }
                     />
+                    <div className="meal-actions">
+                      {step === dayStep - 1 && draft.mealOrder.length < 8 && (
+                        <button
+                          className="secondary"
+                          onClick={() => {
+                            if (pendingFood) {
+                              setError(
+                                "Save or cancel the unfinished food before adding another meal.",
+                              );
+                              return;
+                            }
+                            const valid = occasionSchema.safeParse(
+                              draft.meals[mealKey],
+                            );
+                            if (!valid.success) {
+                              setError(valid.error.issues[0].message);
+                              return;
+                            }
+                            const key = occasionKeys.find(
+                              (k) => !draft.mealOrder.includes(k),
+                            )!;
+                            setDraft((d) => ({
+                              ...d,
+                              accurate: false,
+                              mealOrder: [...d.mealOrder, key],
+                              meals: {
+                                ...d.meals,
+                                [key]: {
+                                  label: `Meal ${d.mealOrder.length + 1}`,
+                                  skipped: false,
+                                  entries: [],
+                                },
+                              },
+                            }));
+                            navigate(step + 1);
+                          }}
+                        >
+                          Add another meal
+                        </button>
+                      )}
+                      {draft.mealOrder.length > 1 && (
+                        <button
+                          className="text-button"
+                          onClick={() => {
+                            if (
+                              !window.confirm(
+                                "Remove this eating occasion and all its foods?",
+                              )
+                            )
+                              return;
+                            setDraft((d) => {
+                              const meals = { ...d.meals };
+                              delete meals[mealKey];
+                              return {
+                                ...d,
+                                accurate: false,
+                                meals,
+                                mealOrder: d.mealOrder.filter(
+                                  (k) => k !== mealKey,
+                                ),
+                              };
+                            });
+                            setPendingFood(false);
+                            setError("");
+                            setStep(Math.max(2, step - 1));
+                          }}
+                        >
+                          Remove this meal
+                        </button>
+                      )}
+                    </div>
+                    <p className="hint">
+                      {draft.mealOrder.length} eating occasions. You can record
+                      up to 8 separately, with up to 8 foods each. Add another
+                      meal after the last one.
+                    </p>
                   </>
                 )}
-                {step === 7 && (
+                {step === reviewStep && (
                   <>
                     <p className="lead">Does this look like your usual day?</p>
                     <p className="muted">
@@ -944,7 +1073,7 @@ export default function App() {
                         <h3>Your typical day</h3>
                         <button
                           className="text-button"
-                          onClick={() => navigate(2)}
+                          onClick={() => navigate(dayStep)}
                         >
                           Edit day
                         </button>
@@ -953,15 +1082,15 @@ export default function App() {
                         {draft.dayRepresentativeness} · {draft.dayType}
                       </p>
                     </section>
-                    {mealKeys.map((m, i) => (
+                    {draft.mealOrder.map((m, i) => (
                       <section className="review-block" key={m}>
                         <div className="review-title">
-                          <h3>{mealLabels[m]}</h3>
+                          <h3>{draft.meals[m].label}</h3>
                           <button
                             className="text-button"
-                            onClick={() => navigate(i + 3)}
+                            onClick={() => navigate(i + 2)}
                           >
-                            Edit {mealLabels[m].toLowerCase()}
+                            Edit {draft.meals[m].label.toLowerCase()}
                           </button>
                         </div>
                         {draft.meals[m].skipped ? (
@@ -1038,7 +1167,7 @@ export default function App() {
                       Your participation is voluntary.
                     </span>
                   )}
-                  {step < 7 ? (
+                  {step < reviewStep ? (
                     <button
                       className="primary"
                       onClick={next}

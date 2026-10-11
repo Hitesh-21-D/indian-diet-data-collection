@@ -17,7 +17,7 @@ export const policy: StudyPolicy = {
 export function response(): ResponseData {
   return {
     ...blankDraft(),
-    schemaVersion: 2,
+    schemaVersion: 3,
     catalogVersion: policy.catalogVersion,
     profile: {
       age: 24,
@@ -44,6 +44,7 @@ export function response(): ResponseData {
     accurate: true,
     meals: {
       breakfast: {
+        label: "Breakfast",
         skipped: false,
         entries: [
           {
@@ -55,9 +56,9 @@ export function response(): ResponseData {
           },
         ],
       },
-      lunch: { skipped: true, entries: [] },
-      snacks: { skipped: true, entries: [] },
-      dinner: { skipped: true, entries: [] },
+      lunch: { label: "Lunch", skipped: true, entries: [] },
+      snacks: { label: "Snacks & Beverages", skipped: true, entries: [] },
+      dinner: { label: "Dinner", skipped: true, entries: [] },
     },
   };
 }

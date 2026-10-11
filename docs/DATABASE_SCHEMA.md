@@ -1,21 +1,24 @@
 # Schema version 2
 
-`submissions/{anonymousUid}` is create-only through a six-document atomic batch: profile metadata, four private meal documents at `submissions/{uid}/meals/{mealName}`, and `receipts/{anonymousUid}`. All four meals and the receipt must be created with the parent. No partial or later meal writes are accepted. ID and owner both equal Firebase anonymous UID. Server timestamps record creation and consent at submission. Participants cannot retrieve the submission, including their own.
+`submissions/{anonymousUid}` is create-only through an atomic batch: profile metadata, one to eight private occasion documents at `submissions/{uid}/meals/{mealId}`, and `receipts/{anonymousUid}` (3–10 writes). Every occasion listed in `mealOrder` and the receipt must be created with the parent. No partial or later meal writes are accepted. ID and owner both equal Firebase anonymous UID. Server timestamps record creation and consent at submission. Participants cannot retrieve the submission, including their own.
 
 | Field | Shape |
 | --- | --- |
 | `responseId`, `ownerUid` | Anonymous UID, no sequence or public counter |
-| `schemaVersion` | Integer 2 |
+| `schemaVersion` | Integer 3 for new responses; legacy version 2 remains readable by exports and accepted by rules |
 | `catalogVersion` | Hash-derived immutable import version |
 | `createdAt` | Server timestamp |
 | `consent` | `read=true`, `voluntary=true`, version, server timestamp, assent boolean, assentVersion, guardianConsentVersion |
 | `profile` | Integer age ≥16, sex `male`/`female`, heightCm 80–250, weightKg 20–350, goal, diet, avoided array, otherAvoided, optional pattern/activity encoded as empty string |
 | `dayRepresentativeness` | Very typical / Mostly typical / Somewhat typical / Unusual |
 | `dayType` | Typical weekday / Typical weekend / Both are similar |
-| meals subcollection | Exactly breakfast/lunch/snacks/dinner documents in the same batch |
+| `mealOrder` | Unique ordered list of 1–8 IDs from breakfast/lunch/snacks/dinner/extra1/extra2/extra3/extra4 |
+| meals subcollection | Exactly the documents listed in mealOrder, created in the same batch |
 | `accurate` | true, review acknowledgement |
 
-Each meal has a server `createdAt`, `skipped` and `entries` (0–8). A skipped meal must have no foods; a non-skipped meal must have at least one. Each entry stores `source`, `foodCode`, `name`, `unit`, and finite quantity >0 and ≤100. INDB codes are original strings. CUSTOM codes are null and have optional brand and preparation encoded as bounded strings. No nutrition values are stored in participant documents. Custom foods are represented once inside meals, then flattened to their own export.
+Each occasion has a participant-editable `label` (1–80 characters), server `createdAt`, `skipped` and `entries` (0–8). IDs are stable storage slots: after a rename, the ID does not imply meal type; use the label and order for analysis. A skipped occasion must have no foods; other occasions must have at least one. Entries retain `source`, `foodCode`, `name`, `unit`, and finite quantity >0 and ≤100. INDB codes are original strings. CUSTOM codes are null and have bounded brand/preparation strings. No nutrients are stored in participant documents.
+
+Version 2 records retain their original four documents without labels or mealOrder. The exporter reads both formats without modifying stored records. Version 3 exports add `meal_count`, `meal_order` and JSON `meal_labels` to participants, and zero-based `meal_index` plus `meal_label` to food/custom logs. The original `meal` column remains the stable document ID. Legacy records use the original category names as labels. The nutrition join carries these columns through unchanged. Old browser drafts are upgraded in memory with their foods retained and review confirmation reset; the existing draft storage key is retained for migration.
 
 Text and nested structure limits in rules bound the maximum payload far below Firestore's 1 MiB document limit. There are no unrestricted client maps or unchecked food positions. CSV preserves response identifiers, lowercase sex, unrestricted upper age, meal, serving unit, source, catalog and consent/assent versions. Do not relabel sex as gender identity in research analyses.
 

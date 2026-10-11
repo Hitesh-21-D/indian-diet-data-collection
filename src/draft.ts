@@ -1,4 +1,10 @@
-import { blankDraft, type Draft } from "./model";
+import {
+  blankDraft,
+  mealKeys,
+  mealLabels,
+  mealOrderSchema,
+  type Draft,
+} from "./model";
 import { z } from "zod";
 import { entrySchema, profileSchema } from "./model";
 export const DRAFT_KEY = "everyday-diet-study:draft:v2";
@@ -8,7 +14,7 @@ const stored = z
     expires: z.number(),
     draft: z
       .object({
-        schemaVersion: z.literal(2),
+        schemaVersion: z.literal(3),
         catalogVersion: z.string(),
         accurate: z.boolean(),
         dayRepresentativeness: z.string(),
@@ -24,31 +30,44 @@ const stored = z
             guardianConsentVersion: z.string(),
           })
           .strict(),
-        meals: z
-          .object(
-            Object.fromEntries(
-              ["breakfast", "lunch", "snacks", "dinner"].map((k) => [
-                k,
-                z
-                  .object({
-                    skipped: z.boolean(),
-                    entries: z.array(entrySchema).max(8),
-                  })
-                  .strict(),
-              ]),
-            ),
-          )
-          .strict(),
+        mealOrder: mealOrderSchema,
+        meals: z.record(
+          z
+            .object({
+              label: z.string().max(80),
+              skipped: z.boolean(),
+              entries: z.array(entrySchema).max(8),
+            })
+            .strict(),
+        ),
       })
-      .strict(),
+      .strict()
+      .refine(
+        (d) =>
+          Object.keys(d.meals).length === d.mealOrder.length &&
+          d.mealOrder.every((id) => id in d.meals),
+      ),
   })
   .strict();
 export function readDraft(storage?: Storage, now = Date.now()): Draft {
   try {
     storage ??= localStorage;
-    const value = stored.parse(
-      JSON.parse(storage.getItem(DRAFT_KEY) || "null"),
-    );
+    const raw = JSON.parse(storage.getItem(DRAFT_KEY) || "null");
+    if (raw?.draft?.schemaVersion === 2) {
+      raw.draft.schemaVersion = 3;
+      raw.draft.accurate = false;
+      raw.draft.mealOrder = [...mealKeys];
+      raw.draft.meals = Object.fromEntries(
+        mealKeys.map((key) => [
+          key,
+          {
+            ...raw.draft.meals[key],
+            label: key === "snacks" ? "Snacks & Beverages" : mealLabels[key],
+          },
+        ]),
+      );
+    }
+    const value = stored.parse(raw);
     if (
       value.expires <= now ||
       value.expires > now + RETENTION_MS ||

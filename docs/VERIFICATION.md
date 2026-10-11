@@ -1,8 +1,18 @@
 # Readiness audit — 11 October 2026
 
+## Subsequent meal-flow revision
+
+Following physical-phone feedback, instruction numbers now have nonshrinking, nonwrapping columns. Instructions stay before the first food entry, while **Your Typical Day** questions follow all meal entries. The selected dietary pattern initializes 2, 3, 4 or 5 occasions. Participants can rename, remove and add occasions, up to eight. The questionnaire's navigation and review use the ordered list rather than hardcoded step positions.
+
+New submissions use schema version 3 with `mealOrder` and per-occasion labels. Rules retain version 2 support and enforce complete atomic batches for both formats. The exporter supports both versions and keeps occasion labels/order in CSV. Old saved browser drafts migrate without losing their food entries or relabeling their combined snacks as a single afternoon snack. No existing server responses are rewritten.
+
+The updated rules must be deployed before the new frontend; the live-rule match reported below describes the earlier audit snapshot, not this not-yet-deployed revision.
+
+Revision validation: TypeScript, ESLint and production build passed; 33 unit tests, 17 Firestore security tests, 6 Python pipeline tests and all 35 browser tests passed. Browser coverage spans the five device/browser profiles below and includes adding, naming, removing and submitting a sixth occasion. The 320 px instructions screenshot was visually inspected. One earlier WebKit run exceeded the test's five-second initial-loading assertion; three targeted repeats passed, and the assertion now allows the application's existing 15-second loading budget. The final full suite passed without retries. All submission tests used local demo emulators.
+
 The published information page was checked read-only, and all submission tests ran against local demo Firebase emulators. No production participant records were read, created or deleted during this audit. The researcher previously confirmed a live submission, removed the synthetic record, and successfully ran the authenticated CSV export.
 
-## Current results
+## Earlier readiness audit results (before the meal-flow revision)
 
 | Check | Result |
 | --- | --- |
@@ -30,7 +40,7 @@ Browser coverage now includes touch selection, long custom text, error visibilit
 
 ## Before recruitment
 
-Push these fixes, wait for **Verify study**, then run **Deploy GitHub Pages** on `main`. Prior workflows were reported green by the researcher; this local audit does not claim that a new remote deployment has run. Test the final deployed page on representative physical phones: emulated browser tests cannot cover every device, keyboard or accessibility setting.
+Deploy the updated Firestore rules first, then push these fixes, wait for **Verify study**, and run **Deploy GitHub Pages** on `main`. Prior workflows were reported green by the researcher; this local audit does not claim that a new remote deployment has run. Test the final deployed page on representative physical phones: emulated browser tests cannot cover every device, keyboard or accessibility setting.
 
 The audit found no remaining failing automated checks. App Check is not implemented/enforced by this code; controlled recruitment and usage monitoring remain necessary. Firestore point-in-time recovery and database deletion protection were disabled at audit time. Protect exported snapshots and process withdrawal requests across Firestore and retained exports. See [RUNNING_THE_STUDY.md](RUNNING_THE_STUDY.md) for the operating procedure. The shared Firebase bundle still produces a nonfatal size warning (about 988 KB uncompressed / 261 KB gzip).
 

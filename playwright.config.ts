@@ -6,6 +6,18 @@ export default defineConfig({
   projects: [
     { name: "desktop", use: { ...devices["Desktop Chrome"] } },
     { name: "mobile", use: { ...devices["Pixel 7"] } },
+    {
+      name: "small-mobile",
+      use: { ...devices["Pixel 7"], viewport: { width: 320, height: 640 } },
+    },
+    {
+      name: "tablet",
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 768, height: 1024 },
+      },
+    },
+    { name: "webkit-mobile", use: { ...devices["iPhone 13"] } },
   ],
   webServer: {
     command: "npm run dev -- --port 5173 --strictPort",

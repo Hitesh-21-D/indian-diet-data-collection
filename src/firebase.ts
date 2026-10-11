@@ -65,6 +65,16 @@ export async function loadPolicy(): Promise<StudyPolicy> {
     throw new Error("The study is awaiting approved participant information.");
   return policySchema.parse(snapshot.data());
 }
+// Restore only this browser's existing server receipt; do not create an account
+// merely by opening the information page.
+export async function loadExistingReceipt(): Promise<string | null> {
+  if (!auth || !db) return null;
+  await auth.authStateReady();
+  if (!auth.currentUser) return null;
+  const uid = auth.currentUser.uid;
+  const receipt = await getDocFromServer(doc(db, "receipts", uid));
+  return receipt.exists() ? uid : null;
+}
 export async function checkGuardianConsent(
   policy: StudyPolicy,
 ): Promise<{ uid: string; verified: boolean }> {

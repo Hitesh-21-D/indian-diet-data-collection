@@ -404,7 +404,7 @@ label small {
 }
 .field-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 23px 20px;
   margin: 26px 0;
 }
@@ -546,6 +546,7 @@ mark {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  flex-wrap: wrap;
 }
 .quantity-row small {
   display: inline;
@@ -621,8 +622,9 @@ mark {
 .icon-button {
   background: white;
   border: 1px solid var(--border);
-  width: 36px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
   display: grid;
   place-items: center;
   color: var(--green);
@@ -655,7 +657,12 @@ mark {
 }
 .review-foods strong {
   font-weight: 500;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: right;
+  flex: 0 1 35%;
+}
+.review-foods li > span {
+  flex: 1;
 }
 .review-foods small {
   display: block;
@@ -704,13 +711,39 @@ footer {
 .skip-link:focus {
   top: 0;
 }
+/* Long participant text and household units must wrap within narrow screens. */
+.panel {
+  overflow-wrap: anywhere;
+}
+.field-grid > *,
+.meal-list li > div,
+.review-foods li > * {
+  min-width: 0;
+}
+.meal-list .inline-actions {
+  flex-shrink: 0;
+}
+.text-button {
+  min-height: 44px;
+}
+.quantity button {
+  width: 44px;
+}
+.submission-fields {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
 @media (max-width: 850px) {
   .page-intro {
     padding-left: 0;
   }
   .survey-layout {
-    grid-template-columns: 180px minmax(0, 1fr);
-    gap: 25px;
+    display: block;
+  }
+  aside {
+    display: none;
   }
   .panel {
     padding: 28px;
@@ -730,6 +763,10 @@ footer {
   }
 }
 @media (max-width: 640px) {
+  input:not([type="checkbox"]):not([type="radio"]),
+  select {
+    font-size: 16px;
+  }
   .header-inner {
     min-height: 82px;
     padding: 17px 20px;
@@ -787,10 +824,12 @@ footer {
     font-size: 11px;
   }
   .field-grid {
+    grid-template-columns: minmax(0, 1fr);
     gap: 20px 14px;
   }
   .navigation {
     gap: 10px;
+    flex-wrap: wrap;
   }
   .primary,
   .secondary {
@@ -802,8 +841,8 @@ footer {
     font-size: 10px;
   }
   .study-details > div {
-    grid-template-columns: 100px 1fr;
-    gap: 10px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3px;
   }
   .choice-grid {
     gap: 7px;
@@ -813,7 +852,7 @@ footer {
     padding: 10px;
   }
   .quantity {
-    max-width: 154px;
+    max-width: 170px;
   }
   .quantity input {
     width: 66px !important;
@@ -837,7 +876,11 @@ footer {
   .sex .radio {
     margin-right: 11px;
     font-size: 12px;
+    min-height: 44px;
   }
+}
+@media (max-width: 380px) {
+  .choice-grid { grid-template-columns: minmax(0, 1fr); }
 }
 @media (prefers-reduced-motion: reduce) {
   * {

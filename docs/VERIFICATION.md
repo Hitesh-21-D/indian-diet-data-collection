@@ -1,4 +1,44 @@
-# Implementation verification — 10 October 2026
+# Readiness audit — 11 October 2026
+
+The published information page was checked read-only, and all submission tests ran against local demo Firebase emulators. No production participant records were read, created or deleted during this audit. The researcher previously confirmed a live submission, removed the synthetic record, and successfully ran the authenticated CSV export.
+
+## Current results
+
+| Check | Result |
+| --- | --- |
+| TypeScript, ESLint, production build | Passed |
+| Unit tests | 31 passed |
+| Python data pipeline | 5 passed |
+| Firestore emulator security tests | 14 passed |
+| Browser tests | 30 passed across desktop Chromium, Pixel 7-sized Chromium, 320 px Chromium, 768 px tablet Chromium and iPhone 13-sized WebKit |
+| Production dependency audit | Zero reported vulnerabilities |
+| Live project/region | `indian-diet-research`, `asia-south1` (Mumbai), Firestore Native |
+| Anonymous Authentication | Enabled |
+| Live study policy | Collection enabled; minors disabled; institution, contact, retention, withdrawal and ethics text configured |
+| Consent/catalog versions | `adult-v1`; `indb-65f91911de09ebdb-serving-v2` |
+| Live Firestore rules | Exact match with local `firestore.rules`, after newline normalization |
+| Public mobile page | HTTP 200, expected institution, no JavaScript page errors or horizontal overflow at 390 px |
+| Git-tracked private config/exports | No `.env.local` or `exports/` files tracked |
+
+Live metadata was read using the configured researcher's Application Default Credentials. Institutional ethical clearance was reported by the researcher, not independently reviewed in this audit. The policy states indefinite retention and deletion requests within seven days. Authentication authorized domains contain localhost and the two Firebase project domains; the current implementation uses anonymous sign-in, not OAuth redirects. Revisit authorized domains if adding another authentication provider.
+
+## Fixes and additional coverage
+
+Phone forms and tablet layout now reflow without squeezing controls. Phone inputs use 16 px text and touch buttons are larger. Long food names and units wrap in meal lists and review. Food edits warn before navigation discards them. Keyboard-highlighted search options scroll into view. Validation feedback receives focus. Blocking access to localStorage no longer crashes startup. A confirmed server receipt is restored after reload, questionnaire editing is disabled during submission, and initial loading has a bounded retry state. The adult-only enrollment text reflects the policy, and the progress bar matches its percentage.
+
+Browser coverage now includes touch selection, long custom text, error visibility, blocked storage, catalog download failure/retry, and confirmed receipt recovery, in addition to the original full workflow. Screenshots of narrow-phone profile, food entry and WebKit review were visually inspected. A final 320 px refinement stacks avoidance choices to prevent awkward word splitting. CI installs Chromium and WebKit.
+
+## Before recruitment
+
+Push these fixes, wait for **Verify study**, then run **Deploy GitHub Pages** on `main`. Prior workflows were reported green by the researcher; this local audit does not claim that a new remote deployment has run. Test the final deployed page on representative physical phones: emulated browser tests cannot cover every device, keyboard or accessibility setting.
+
+The audit found no remaining failing automated checks. App Check is not implemented/enforced by this code; controlled recruitment and usage monitoring remain necessary. Firestore point-in-time recovery and database deletion protection were disabled at audit time. Protect exported snapshots and process withdrawal requests across Firestore and retained exports. See [RUNNING_THE_STUDY.md](RUNNING_THE_STUDY.md) for the operating procedure. The shared Firebase bundle still produces a nonfatal size warning (about 988 KB uncompressed / 261 KB gzip).
+
+---
+
+## Historical implementation verification — 10 October 2026
+
+The remainder records the original implementation session before live setup and deployment. Its outstanding operational items were superseded by the audit above where explicitly verified.
 
 Completed locally on Windows using Node.js 20.19.0, bundled Python, a project-local Java 21 runtime, Firebase demo emulators and Playwright Chromium. CI recommends Node 22 and Java 21. The CI workflows have been authored but were not run on GitHub.
 

@@ -112,6 +112,11 @@ test("complete survey, search, edit, custom food, skips, refresh, receipt and sa
       () => document.documentElement.scrollWidth <= window.innerWidth,
     ),
   ).toBe(true);
+  await page.reload();
+  await expect(
+    page.getByRole("heading", { name: "Thank you for taking part." }),
+  ).toBeVisible();
+  await expect(page.locator(".receipt code")).toHaveText(firstReceipt!);
 });
 test("16–17 blocked pending approvals; fractional and underage ages rejected", async ({
   page,

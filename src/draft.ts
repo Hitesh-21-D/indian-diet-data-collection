@@ -43,11 +43,9 @@ const stored = z
       .strict(),
   })
   .strict();
-export function readDraft(
-  storage: Storage = localStorage,
-  now = Date.now(),
-): Draft {
+export function readDraft(storage?: Storage, now = Date.now()): Draft {
   try {
+    storage ??= localStorage;
     const value = stored.parse(
       JSON.parse(storage.getItem(DRAFT_KEY) || "null"),
     );
@@ -57,13 +55,13 @@ export function readDraft(
       typeof value.draft.profile.age !== "number" ||
       value.draft.profile.age < 18
     ) {
-      storage.removeItem(DRAFT_KEY);
+      storage?.removeItem(DRAFT_KEY);
       return blankDraft();
     }
     return value.draft as Draft;
   } catch {
     try {
-      storage.removeItem(DRAFT_KEY);
+      storage?.removeItem(DRAFT_KEY);
     } catch {
       /* storage may be disabled */
     }

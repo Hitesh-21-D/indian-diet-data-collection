@@ -3,18 +3,11 @@
 export async function withTimeout<T>(
   operation: Promise<T>,
   milliseconds: number,
+  message = "The connection is taking too long. Your response may still be processing; retry to check its status.",
 ): Promise<T> {
   let timer: ReturnType<typeof setTimeout> | undefined;
   const timeout = new Promise<never>((_, reject) => {
-    timer = setTimeout(
-      () =>
-        reject(
-          new Error(
-            "The connection is taking too long. Your response may still be processing; retry to check its status.",
-          ),
-        ),
-      milliseconds,
-    );
+    timer = setTimeout(() => reject(new Error(message)), milliseconds);
   });
   try {
     return await Promise.race([operation, timeout]);

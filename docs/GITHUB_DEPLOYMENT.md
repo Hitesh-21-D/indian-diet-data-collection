@@ -1,6 +1,6 @@
 # GitHub Pages deployment
 
-The deliverable is a local project. No GitHub account/repository target was provided, and no site was published during creation.
+The project is published at https://hitesh-21-d.github.io/indian-diet-data-collection/ from https://github.com/Hitesh-21-D/indian-diet-data-collection. The steps below also describe redeployment. Local edits do not change the published site until they are pushed and the Pages workflow completes.
 
 1. Create the desired GitHub repository and push the **contents of indian-diet-data-collection as the repository root**. If keeping this folder in a larger repository, adapt Actions working directories and artifact paths. Do not push `.env.local`, raw private files, service-account keys or exports.
 2. Add the six VITE_FIREBASE_* values as Actions repository **variables**. These Firebase web settings are public client identifiers, not Admin credentials. Never use a server key as a Vite variable.

@@ -64,7 +64,7 @@ npm test
 python scripts/test_pipeline.py
 npm run build
 npm run test:rules
-npx playwright install chromium
+npx playwright install chromium webkit
 npx firebase emulators:exec --project demo-diet-study --only firestore,auth "node scripts/seed_emulator.mjs && npm run test:browser"
 ```
 
@@ -83,7 +83,7 @@ Outputs include participants, food logs, custom foods and rejected-record diagno
 
 ## Deploy and operate
 
-Follow [Firebase setup](docs/FIREBASE_SETUP.md) and [GitHub Pages deployment](docs/GITHUB_DEPLOYMENT.md). Deploy rules separately from the frontend. The frontend build cannot publish Firestore rules or enable authentication. Complete CI before triggering Pages. `.env.local` contains public Firebase web configuration and is intentionally ignored. Public web config is not an administrative credential.
+Follow [Firebase setup](docs/FIREBASE_SETUP.md) and [GitHub Pages deployment](docs/GITHUB_DEPLOYMENT.md). Use the [study operating guide](docs/RUNNING_THE_STUDY.md) for exports, withdrawals and pausing collection. Deploy rules separately from the frontend. The frontend build cannot publish Firestore rules or enable authentication. Complete CI before triggering Pages. `.env.local` contains public Firebase web configuration and is intentionally ignored. Public web config is not an administrative credential.
 
 ## Privacy, security and limitations
 

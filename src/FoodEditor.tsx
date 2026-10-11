@@ -1,4 +1,4 @@
-import { useId, useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { Minus, Plus, Search, Trash2, Pencil } from "lucide-react";
 import { entrySchema, searchFoods, type Food, type FoodEntry } from "./model";
 
@@ -17,10 +17,12 @@ export default function FoodEditor({
   foods,
   value,
   onChange,
+  onPendingChange,
 }: {
   foods: Food[];
   value: { skipped: boolean; entries: FoodEntry[] };
   onChange: (v: typeof value) => void;
+  onPendingChange: (pending: boolean) => void;
 }) {
   const id = useId();
   const [query, setQuery] = useState("");
@@ -30,6 +32,14 @@ export default function FoodEditor({
   const [quantity, setQuantity] = useState("1");
   const [editing, setEditing] = useState<number | null>(null);
   const [error, setError] = useState("");
+  const selectedOption = useRef<HTMLLIElement>(null);
+  useEffect(
+    () => onPendingChange(selected !== null),
+    [selected, onPendingChange],
+  );
+  useEffect(() => {
+    if (open) selectedOption.current?.scrollIntoView({ block: "nearest" });
+  }, [active, open]);
   const results = useMemo(() => searchFoods(foods, query), [foods, query]);
   function choose(food: Food) {
     setSelected({
@@ -152,6 +162,7 @@ export default function FoodEditor({
                       aria-selected={i === active}
                       id={`${id}-option-${i}`}
                       key={f.foodCode}
+                      ref={i === active ? selectedOption : undefined}
                       onMouseDown={(e) => e.preventDefault()}
                       onMouseEnter={() => setActive(i)}
                       onClick={() => choose(f)}
@@ -272,6 +283,7 @@ export default function FoodEditor({
                   <input
                     id={`${id}-quantity`}
                     type="number"
+                    inputMode="decimal"
                     min="0.001"
                     max="100"
                     step="any"

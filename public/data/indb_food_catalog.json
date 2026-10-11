@@ -1,0 +1,7174 @@
+{
+  "version": "indb-65f91911de09ebdb-serving-v2",
+  "sourceSha256": "65f91911de09ebdb4b80c4a3dc3ff372a35420e05444239d8df8a42e8b5b9ecf",
+  "foods": [
+    {
+      "foodCode": "ASC001",
+      "name": "Hot tea (Garam Chai)",
+      "unit": "tea cup",
+      "aliases": [
+        "Garam Chai"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC002",
+      "name": "Instant coffee",
+      "unit": "tea cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC003",
+      "name": "Espreso coffee",
+      "unit": "tea cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC004",
+      "name": "Iced tea",
+      "unit": "tall glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC005",
+      "name": "Raw mango drink (Aam panna)",
+      "unit": "tall glass",
+      "aliases": [
+        "Aam panna"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC006",
+      "name": "Fruit Punch (with fresh juices)",
+      "unit": "tall glass",
+      "aliases": [
+        "with fresh juices"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC007",
+      "name": "Fruit Punch (with squashes)",
+      "unit": "tall glass",
+      "aliases": [
+        "with squashes"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC008",
+      "name": "Lemonade",
+      "unit": "glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC009",
+      "name": "Lem-o-gin",
+      "unit": "glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC010",
+      "name": "Cumin infused water (Jeere/Zeere ka pani)",
+      "unit": "glass",
+      "aliases": [
+        "Jeere/Zeere ka pani"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC011",
+      "name": "Coco pine cooler",
+      "unit": "tall glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC012",
+      "name": "Summer cooler",
+      "unit": "tall glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC014",
+      "name": "Hot cocoa",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC015",
+      "name": "Cold coffee with ice cream",
+      "unit": "tall glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC016",
+      "name": "Banana milkshake (Kele milkshake)",
+      "unit": "tall glass",
+      "aliases": [
+        "Kele milkshake"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC017",
+      "name": "Mango milkshake (Aam milkshake)",
+      "unit": "tall glass",
+      "aliases": [
+        "Aam milkshake"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC018",
+      "name": "Pineapple milkshake (Ananas milkshake)",
+      "unit": "tall glass",
+      "aliases": [
+        "Ananas milkshake"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC019",
+      "name": "Orange milkshake (Narangi milkshake)",
+      "unit": "tall glass",
+      "aliases": [
+        "Narangi milkshake"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC020",
+      "name": "Egg nog",
+      "unit": "tall glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC021",
+      "name": "Sweet Lassi (Meethi lassi)",
+      "unit": "tall glass",
+      "aliases": [
+        "Meethi lassi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC022",
+      "name": "Lassi (salted)",
+      "unit": "tall glass",
+      "aliases": [
+        "salted"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC023",
+      "name": "Cheese and chilli sandwich",
+      "unit": "triangle",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC024",
+      "name": "Egg sandwich (Ande ka sandwich)",
+      "unit": "triangle",
+      "aliases": [
+        "Ande ka sandwich"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC025",
+      "name": "Cucumber sandwich (Kheere ka sandwich)",
+      "unit": "triangle",
+      "aliases": [
+        "Kheere ka sandwich"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC026",
+      "name": "Cheese and pineapple sandwich (Cheese aur ananas ka sandwich)",
+      "unit": "triangle",
+      "aliases": [
+        "Cheese aur ananas ka sandwich"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC027",
+      "name": "Cheese and tomato sandwich (Cheese aur tamatar ke sandwich)",
+      "unit": "triangle",
+      "aliases": [
+        "Cheese aur tamatar ke sandwich"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC028",
+      "name": "Chicken sandwich",
+      "unit": "triangle",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC029",
+      "name": "Peanut and tomato sandwich (Moongfali aur tamatar ka sandwich)",
+      "unit": "triangle",
+      "aliases": [
+        "Moongfali aur tamatar ka sandwich"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC030",
+      "name": "Rainbow sandwich",
+      "unit": "triangle",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC031",
+      "name": "Club sandwich",
+      "unit": "triangle",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC032",
+      "name": "Vegetarian club sandwich",
+      "unit": "triangle",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC033",
+      "name": "Pin wheel sandwich",
+      "unit": "triangle",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC034",
+      "name": "Carrot apple sandwich (Gajar aur seb ka sandwich)",
+      "unit": "triangle",
+      "aliases": [
+        "Gajar aur seb ka sandwich"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC035",
+      "name": "Salami sandwich",
+      "unit": "triangle",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC036",
+      "name": "Vegetable and mayonnaise sandwich",
+      "unit": "triangle",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC037",
+      "name": "Egg and tomato sandwich (Ande aur tamatar ka sandwich)",
+      "unit": "triangle",
+      "aliases": [
+        "Ande aur tamatar ka sandwich"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC038",
+      "name": "Sweet open sandwich",
+      "unit": "triangle",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC039",
+      "name": "Mushroom and cheese sandwich (toasted)",
+      "unit": "triangle",
+      "aliases": [
+        "toasted"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC040",
+      "name": "Cheese and tomato sandwich (toasted) (Cheese aur tamatar ke sandwich (toasted))",
+      "unit": "triangle",
+      "aliases": [
+        "Cheese aur tamatar ke sandwich (toasted",
+        "toasted"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC041",
+      "name": "Pea potato sandwich (toasted) (Matar aloo ka sandwich)",
+      "unit": "toasted triangle",
+      "aliases": [
+        "Matar aloo ka sandwich",
+        "toasted"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC042",
+      "name": "Paneer pea sandwich (toasted) (Paneer matar ka sandwich)",
+      "unit": "toasted triangle",
+      "aliases": [
+        "Paneer matar ka sandwich",
+        "toasted"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC043",
+      "name": "Chicken sandwich (toasted)",
+      "unit": "toasted triangle",
+      "aliases": [
+        "toasted"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC044",
+      "name": "Pea keema sandwich (toasted) (Matar aur keema ka sandwich)",
+      "unit": "toasted triangle",
+      "aliases": [
+        "Matar aur keema ka sandwich",
+        "toasted"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC045",
+      "name": "Classic club sandwich",
+      "unit": "triangle",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC046",
+      "name": "Sesame toast",
+      "unit": "toasted triangle",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC047",
+      "name": "Cracked wheat porridge (Meetha daliya)",
+      "unit": "bowl",
+      "aliases": [
+        "Meetha daliya"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC048",
+      "name": "Semolina porridge (Suji/Rava daliya)",
+      "unit": "bowl",
+      "aliases": [
+        "Suji/Rava daliya"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC050",
+      "name": "Oatmeal Porridge",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC051",
+      "name": "Cornflakes with milk",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC052",
+      "name": "Rice flakes (Chiwda/Aval)",
+      "unit": "bowl",
+      "aliases": [
+        "Chiwda/Aval"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC053",
+      "name": "Wheat flakes",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC054",
+      "name": "Murmura (Puffed rice)",
+      "unit": "bowl",
+      "aliases": [
+        "Puffed rice"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC055",
+      "name": "Puffed wheat (Murmure/Moori)",
+      "unit": "bowl",
+      "aliases": [
+        "Murmure/Moori"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC056",
+      "name": "Boiled egg (Ubla anda)",
+      "unit": "egg",
+      "aliases": [
+        "Ubla anda"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC057",
+      "name": "Fried Egg",
+      "unit": "egg",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC058",
+      "name": "Poached egg",
+      "unit": "egg",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC059",
+      "name": "Scrambled egg (Ande ki bhurji)",
+      "unit": "egg",
+      "aliases": [
+        "Ande ki bhurji"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC060",
+      "name": "Baked egg",
+      "unit": "egg",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC061",
+      "name": "Plain omelette/omlet",
+      "unit": "omelette",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC062",
+      "name": "Stuffed egg omelette/omlet",
+      "unit": "omelette",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC063",
+      "name": "Pancake",
+      "unit": "pancake",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC064",
+      "name": "Keema pancake",
+      "unit": "pancake",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC065",
+      "name": "Vegetable pancake",
+      "unit": "pancake",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC066",
+      "name": "Jam and fruit pancake",
+      "unit": "pancake",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC067",
+      "name": "Khoa and coconut pancake",
+      "unit": "pancake",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC068",
+      "name": "Brown stock",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC069",
+      "name": "Vegetable stock",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC070",
+      "name": "Chicken stock",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC079",
+      "name": "Clear tomato soup (Tamatar ka soup)",
+      "unit": "soup bowl",
+      "aliases": [
+        "Tamatar ka soup"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC080",
+      "name": "Lentil soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC081",
+      "name": "Chicken consomme (Clear chicken soup)",
+      "unit": "soup bowl",
+      "aliases": [
+        "Clear chicken soup"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC082",
+      "name": "Cream of tomato soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC083",
+      "name": "Cream of green peas soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC084",
+      "name": "Cream of spinach soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC085",
+      "name": "Cream of mixed vegetable soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC086",
+      "name": "Cream of mushroom soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC087",
+      "name": "Chicken sweet corn soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC088",
+      "name": "Minestrone soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC089",
+      "name": "Egg drop soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC090",
+      "name": "Chinese cabbage and meat ball soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC091",
+      "name": "French onion soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC092",
+      "name": "Hot and sour soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC093",
+      "name": "Talaumein soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC094",
+      "name": "Cold cucumber soup (Thanda kheere ka soup)",
+      "unit": "soup bowl",
+      "aliases": [
+        "Thanda kheere ka soup"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC095",
+      "name": "Cold summer garden soup",
+      "unit": "soup bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC096",
+      "name": "Chapati/Roti",
+      "unit": "chapati",
+      "aliases": [
+        "chapati",
+        "chapatti",
+        "phulka",
+        "roti"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC097",
+      "name": "Plain parantha/paratha",
+      "unit": "parantha",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC098",
+      "name": "Potato parantha/paratha (Aloo ka parantha/paratha)",
+      "unit": "parantha",
+      "aliases": [
+        "Aloo ka parantha/paratha"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC099",
+      "name": "Radish parantha/paratha (Mooli ka parantha/paratha)",
+      "unit": "parantha",
+      "aliases": [
+        "Mooli ka parantha/paratha"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC100",
+      "name": "Cauliflower parantha/paratha (Phoolgobhi ka parantha/paratha)",
+      "unit": "parantha",
+      "aliases": [
+        "Phoolgobhi ka parantha/paratha"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC101",
+      "name": "Dal parantha/paratha",
+      "unit": "parantha",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC102",
+      "name": "Sprouted moong parantha/paratha",
+      "unit": "parantha",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC103",
+      "name": "Pea parantha/paratha (Matar ka parantha/paratha)",
+      "unit": "parantha",
+      "aliases": [
+        "Matar ka parantha/paratha"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC104",
+      "name": "Keema parantha/paratha",
+      "unit": "parantha",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC105",
+      "name": "Paneer parantha/paratha",
+      "unit": "parantha",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC106",
+      "name": "Besan and spinach parantha/paratha (Besan aur palak ka parantha/paratha)",
+      "unit": "parantha",
+      "aliases": [
+        "Besan aur palak ka parantha/paratha"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC107",
+      "name": "Poori",
+      "unit": "poori",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC108",
+      "name": "Spinach poori (Palak poori)",
+      "unit": "poori",
+      "aliases": [
+        "Palak poori"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC109",
+      "name": "Methi poori",
+      "unit": "poori",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC110",
+      "name": "Dal stuffed poori",
+      "unit": "poori",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC111",
+      "name": "Potato stuffed poori (Aloo ki poori)",
+      "unit": "poori",
+      "aliases": [
+        "Aloo ki poori"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC112",
+      "name": "Tandoori parantha/paratha",
+      "unit": "parantha",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC113",
+      "name": "Boiled rice (Uble chawal)",
+      "unit": "plate",
+      "aliases": [
+        "Uble chawal"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC114",
+      "name": "Plain pulao",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC115",
+      "name": "Mixed vegetable pulao",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC116",
+      "name": "Mushroom pulao",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC117",
+      "name": "Sprouted moong pulao",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC118",
+      "name": "Paneer pulao",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC119",
+      "name": "Peanut pulao",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC120",
+      "name": "Navratan pulao",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC121",
+      "name": "Green chickpeas pulao (Choliya pulao/Hare chane ka pulao)",
+      "unit": "plate",
+      "aliases": [
+        "Choliya pulao/Hare chane ka pulao"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC122",
+      "name": "Mutton biryani/biriyani",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC123",
+      "name": "Vegetable biryani/biriyani",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC124",
+      "name": "Lemon rice (Pulihora, Elumichai sadam, Chitranna)",
+      "unit": "plate",
+      "aliases": [
+        "Pulihora, Elumichai sadam, Chitranna"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC125",
+      "name": "Sweet rice (Meethe chawal)",
+      "unit": "plate",
+      "aliases": [
+        "Meethe chawal"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC126",
+      "name": "Curd rice (Dahi bhaat/Dahi chawal/ Perugu annam/Daddojanam/Thayir saadam)",
+      "unit": "plate",
+      "aliases": [
+        "Dahi bhaat/Dahi chawal/ Perugu annam/Daddojanam/Thayir saadam",
+        "curd",
+        "dahi",
+        "yoghurt",
+        "yogurt"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC127",
+      "name": "Tamarind rice (Chintapandu pulihora/Puliyodharai/Puli sadam/Huli anna)",
+      "unit": "plate",
+      "aliases": [
+        "Chintapandu pulihora/Puliyodharai/Puli sadam/Huli anna"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC128",
+      "name": "Spanish rice",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC129",
+      "name": "Chinese fried rice",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC133",
+      "name": "Macroni cheese pie",
+      "unit": "casserole dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC134",
+      "name": "Vegetable chowmein",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC135",
+      "name": "Chicken chowmein",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC136",
+      "name": "Cheese noodle ring",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC137",
+      "name": "Spaghetti and cheese balls in tomato sauce",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC138",
+      "name": "Penne platter",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC139",
+      "name": "Pasta hot pot",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC140",
+      "name": "Chicken lasagne",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC141",
+      "name": "Fettuccine with spinach sauce",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC142",
+      "name": "Naan",
+      "unit": "naan",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC143",
+      "name": "Bhatura",
+      "unit": "bhatura",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC144",
+      "name": "Idli",
+      "unit": "idli",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC146",
+      "name": "Masala dosa",
+      "unit": "dosa",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC147",
+      "name": "Semolina dosa (Suji/Rava dosa)",
+      "unit": "dosa",
+      "aliases": [
+        "Suji/Rava dosa"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC148",
+      "name": "Onion tomato uttapam",
+      "unit": "uttapam",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC149",
+      "name": "Paneer kaathi roll",
+      "unit": "kaathi roll",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC150",
+      "name": "Makki ki roti",
+      "unit": "roti",
+      "aliases": [
+        "chapati",
+        "chapatti",
+        "phulka",
+        "roti"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC151",
+      "name": "Washed moong dal (Dhuli moong ki dal)",
+      "unit": "bowl",
+      "aliases": [
+        "Dhuli moong ki dal"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC152",
+      "name": "Washed urad dal (Dhuli urad ki dal)",
+      "unit": "bowl",
+      "aliases": [
+        "Dhuli urad ki dal"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC153",
+      "name": "Split bengal gram with bottle gourd (Channa dal with ghiya/lauki)",
+      "unit": "bowl",
+      "aliases": [
+        "Channa dal with ghiya/lauki"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC154",
+      "name": "Dry washed urad",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC155",
+      "name": "Mixed dal",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC156",
+      "name": "Whole moong (Moong ki dal)",
+      "unit": "bowl",
+      "aliases": [
+        "Moong ki dal"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC157",
+      "name": "Whole masoor (Masoor ki dal)",
+      "unit": "bowl",
+      "aliases": [
+        "Masoor ki dal"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC158",
+      "name": "Whole moth (Moth ki dal)",
+      "unit": "bowl",
+      "aliases": [
+        "Moth ki dal"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC159",
+      "name": "Whole urad (Urad ki dal)",
+      "unit": "bowl",
+      "aliases": [
+        "Urad ki dal"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC160",
+      "name": "Moti mahal dal (Urad rajmah mix dal)",
+      "unit": "bowl",
+      "aliases": [
+        "Urad rajmah mix dal"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC161",
+      "name": "Black channa curry/Bengal gram curry (Kale chane ki curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Kale chane ki curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC162",
+      "name": "Chickpeas curry (Safed channa curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Safed channa curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC163",
+      "name": "Lobia curry",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC164",
+      "name": "Soyabean curry",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC165",
+      "name": "Kidney bean curry (Rajmah curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Rajmah curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC167",
+      "name": "Sambar",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC168",
+      "name": "Besan kadhi with pakodies",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC169",
+      "name": "Khatta channa",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC170",
+      "name": "Sprouted moong dal chat",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC171",
+      "name": "Potato cauliflower (Aloo gobhi)",
+      "unit": "bowl",
+      "aliases": [
+        "Aloo gobhi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC172",
+      "name": "Potato capsicum (Shimla mirch aloo)",
+      "unit": "bowl",
+      "aliases": [
+        "Shimla mirch aloo"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC173",
+      "name": "Cabbage and peas (Pattagobhi aur matar)",
+      "unit": "bowl",
+      "aliases": [
+        "Pattagobhi aur matar"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC174",
+      "name": "Carrot and fenugreek leaves (Gajar methi)",
+      "unit": "bowl",
+      "aliases": [
+        "Gajar methi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC175",
+      "name": "Potato fenugreek (Aloo methi)",
+      "unit": "bowl",
+      "aliases": [
+        "Aloo methi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC177",
+      "name": "Brinjal bhartha (Baingan ka bhartha)",
+      "unit": "bowl",
+      "aliases": [
+        "Baingan ka bhartha"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC178",
+      "name": "Dry potato (Sookhe aloo)",
+      "unit": "bowl",
+      "aliases": [
+        "Sookhe aloo"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC179",
+      "name": "Beans with coconut (Nariyal aur sem/phali; Beans thoran)",
+      "unit": "bowl",
+      "aliases": [
+        "Nariyal aur sem/phali; Beans thoran"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC180",
+      "name": "Cauliflower with coconut (Nariyal ke saath phoolgobhi)",
+      "unit": "bowl",
+      "aliases": [
+        "Nariyal ke saath phoolgobhi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC181",
+      "name": "Carrot and cabbage with coconut (Nariyal ke saath pattagobhi aur gajar)",
+      "unit": "bowl",
+      "aliases": [
+        "Nariyal ke saath pattagobhi aur gajar"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC182",
+      "name": "Raw turnip with coconut",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC183",
+      "name": "Raw papaya with coconut (Papaya thoran)",
+      "unit": "bowl",
+      "aliases": [
+        "Papaya thoran"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC184",
+      "name": "Stuffed okra (Bharwa bhindi)",
+      "unit": "bowl",
+      "aliases": [
+        "Bharwa bhindi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC185",
+      "name": "Stuffed round gourd (Bharwa tinde)",
+      "unit": "bowl",
+      "aliases": [
+        "Bharwa tinde"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC186",
+      "name": "Stuffed capsicum (Bharwa shimla mirch)",
+      "unit": "capsicum",
+      "aliases": [
+        "Bharwa shimla mirch"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC187",
+      "name": "Stuffed brinjal (Bharwa baingan)",
+      "unit": "brinjal",
+      "aliases": [
+        "Bharwa baingan"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC189",
+      "name": "Stuffed tomatoes (Bharwa tamatar)",
+      "unit": "tomato",
+      "aliases": [
+        "Bharwa tamatar"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC190",
+      "name": "Pea potato curry (Aloo matar)",
+      "unit": "bowl",
+      "aliases": [
+        "Aloo matar"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC191",
+      "name": "Pea paneer curry (Matar paneer)",
+      "unit": "bowl",
+      "aliases": [
+        "Matar paneer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC192",
+      "name": "Pea mushroom curry (Matar mushroom)",
+      "unit": "bowl",
+      "aliases": [
+        "Matar mushroom"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC193",
+      "name": "Pea curry (Matar ki sabzi)",
+      "unit": "bowl",
+      "aliases": [
+        "Matar ki sabzi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC194",
+      "name": "Pea vadi curry",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC195",
+      "name": "Paneer curry",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC196",
+      "name": "Lotus stem curry (Kamal kakdi curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Kamal kakdi curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC197",
+      "name": "Gravy for kofta",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC198",
+      "name": "Pea kofta curry (Matar kofta curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Matar kofta curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC199",
+      "name": "Spinach kofta curry (Palak kofta curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Palak kofta curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC200",
+      "name": "Paneer kofta curry",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC201",
+      "name": "Lotus stem kofta curry (Kamal kakdi kofta curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Kamal kakdi kofta curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC202",
+      "name": "Raw banana kofta curry (Kela kofta curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Kela kofta curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC203",
+      "name": "Cauliflower kofta curry (Phoolgobhi kofta curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Phoolgobhi kofta curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC204",
+      "name": "Cabbage kofta curry (Pattagobhi kofta curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Pattagobhi kofta curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC205",
+      "name": "Ghiya/Lauki Kofta Curry",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC206",
+      "name": "Spinach paneer kofta curry (Palak paneer kofta curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Palak paneer kofta curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC207",
+      "name": "Vegetarian egg kofta curry",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC208",
+      "name": "Baked vegetables",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC209",
+      "name": "Cauliflower musallam (Phoolgobhi musallam)",
+      "unit": "bowl",
+      "aliases": [
+        "Phoolgobhi musallam"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC210",
+      "name": "Baked vegetables with spinach",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC211",
+      "name": "Baked potato with skin",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC212",
+      "name": "Shepherd's pie (vegetarian)",
+      "unit": "bowl",
+      "aliases": [
+        "vegetarian"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC213",
+      "name": "Baked brinjal in tomato sauce",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC214",
+      "name": "Dum aloo",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC215",
+      "name": "Spinach paneer (Palak paneer)",
+      "unit": "bowl",
+      "aliases": [
+        "Palak paneer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC216",
+      "name": "Methi chaman",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC217",
+      "name": "Sarson ka saag",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC218",
+      "name": "Jackfruit sabzi (Kathal ki sabzi)",
+      "unit": "bowl",
+      "aliases": [
+        "Kathal ki sabzi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC219",
+      "name": "Avial",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC220",
+      "name": "Al yakhani",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC221",
+      "name": "Shahi paneer",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC222",
+      "name": "Paneer in butter sauce",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC223",
+      "name": "Methi malai paneer",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC224",
+      "name": "Chilli paneer",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC225",
+      "name": "Paneer makhana korma",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC226",
+      "name": "Kadhai Paneer",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC227",
+      "name": "Roghan josh",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC228",
+      "name": "Spinach mutton (Palak mutton)",
+      "unit": "bowl",
+      "aliases": [
+        "Palak mutton"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC229",
+      "name": "Pea keema curry (Matar keema ki sabzi)",
+      "unit": "bowl",
+      "aliases": [
+        "Matar keema ki sabzi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC230",
+      "name": "Keema kofta curry",
+      "unit": "kofta",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC231",
+      "name": "Kashmiri mutton koftas (Gushtaba)",
+      "unit": "gushtaba",
+      "aliases": [
+        "Gushtaba"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC232",
+      "name": "Mutton yakhni",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC233",
+      "name": "Chicken yakhni",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC234",
+      "name": "Mutton do piaza",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC236",
+      "name": "Mutton chops",
+      "unit": "chop",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC237",
+      "name": "Shammi kebab",
+      "unit": "kabab",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC238",
+      "name": "Scotch egg",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC239",
+      "name": "Shepherd's pie (with minced meat)",
+      "unit": "dish",
+      "aliases": [
+        "with minced meat"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC240",
+      "name": "Chicken curry",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC241",
+      "name": "Tandoori chicken",
+      "unit": "chicken",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC242",
+      "name": "Butter chicken",
+      "unit": "large piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC243",
+      "name": "Chicken kebab",
+      "unit": "kabab",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC244",
+      "name": "Chilli chicken",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC245",
+      "name": "Fried chicken with tomato sauce (Fried chicken tamatar ki chutney kay saath)",
+      "unit": "piece",
+      "aliases": [
+        "Fried chicken tamatar ki chutney kay saath"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC246",
+      "name": "Fish curry (Machli curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Machli curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC247",
+      "name": "Fried fish (Indian style) (Tali hui machli)",
+      "unit": "piece",
+      "aliases": [
+        "Indian style",
+        "Tali hui machli"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC248",
+      "name": "Fried fish and Chips (English Style) (Tali hui machli aur chips)",
+      "unit": "fillet",
+      "aliases": [
+        "English Style",
+        "Tali hui machli aur chips"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC249",
+      "name": "Tomato fish",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC250",
+      "name": "Baked fish with cheese sauce",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC251",
+      "name": "Fish tikka",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC252",
+      "name": "Tandoori fish",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC253",
+      "name": "Paneer, apple and pineapple salad",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC254",
+      "name": "Russian salad",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC255",
+      "name": "Pasta salad",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC256",
+      "name": "Deviled egg",
+      "unit": "egg",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC257",
+      "name": "Hawain salad",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC258",
+      "name": "Mixed pulse and vegetable salad",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC259",
+      "name": "Sprouted moong salad",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC260",
+      "name": "Tossed salad",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC261",
+      "name": "Mixed vegetable salad with curd sauce",
+      "unit": "bowl",
+      "aliases": [
+        "curd",
+        "dahi",
+        "yoghurt",
+        "yogurt"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC262",
+      "name": "Potato salad (Aloo ka salaad)",
+      "unit": "bowl",
+      "aliases": [
+        "Aloo ka salaad"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC263",
+      "name": "Waldroff salad",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC264",
+      "name": "Coleslaw",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC265",
+      "name": "Fruit salad (Phalon ka salaad)",
+      "unit": "bowl",
+      "aliases": [
+        "Phalon ka salaad"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC269",
+      "name": "Tomato onion raita (Tamatar aur pyaaz ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Tamatar aur pyaaz ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC270",
+      "name": "Peanut raita (Mungfali ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Mungfali ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC271",
+      "name": "Sprouted moong raita",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC272",
+      "name": "Bottle gourd raita (Ghiya/Lauki ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Ghiya/Lauki ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC273",
+      "name": "Cucumber raita (Kheere ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Kheere ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC274",
+      "name": "Carrot and spinach raita (Gajar aur palak ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Gajar aur palak ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC275",
+      "name": "Mint raita (Pudinay ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Pudinay ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC276",
+      "name": "Potato raita (Aloo ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Aloo ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC277",
+      "name": "Boondi raita",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC278",
+      "name": "Sweet raita (Meetha raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Meetha raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC279",
+      "name": "Dahi vadas/Dahi bhalla",
+      "unit": "vada",
+      "aliases": [
+        "curd",
+        "dahi",
+        "yoghurt",
+        "yogurt"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC280",
+      "name": "Gunjia",
+      "unit": "gunjia",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC281",
+      "name": "Saunth/Sonth chutney with tamarind/imli",
+      "unit": "teaspoon",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC282",
+      "name": "Rice kheer (Chawal ki kheer)",
+      "unit": "bowl",
+      "aliases": [
+        "Chawal ki kheer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC283",
+      "name": "Makhana kheer",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC285",
+      "name": "Vermicelli kheer (Semiya/Seviyan ki kheer)",
+      "unit": "bowl",
+      "aliases": [
+        "Semiya/Seviyan ki kheer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC286",
+      "name": "Semolina kheer (Suji/Rava kheer)",
+      "unit": "bowl",
+      "aliases": [
+        "Suji/Rava kheer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC287",
+      "name": "Paneer kheer",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC288",
+      "name": "Cabbage kheer (Pattagobhi ki kheer)",
+      "unit": "bowl",
+      "aliases": [
+        "Pattagobhi ki kheer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC289",
+      "name": "Carrot kheer (Gajar ki kheer)",
+      "unit": "bowl",
+      "aliases": [
+        "Gajar ki kheer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC290",
+      "name": "Cauliflower kheer (Phoolgobhi ki kheer)",
+      "unit": "bowl",
+      "aliases": [
+        "Phoolgobhi ki kheer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC291",
+      "name": "Moong dal kheer",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC292",
+      "name": "Phirni",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC293",
+      "name": "Semolina halwa (Suji ka halwa)",
+      "unit": "bowl",
+      "aliases": [
+        "Suji ka halwa"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC294",
+      "name": "Shahi suji halwa",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC295",
+      "name": "Carrot halwa (Gajar ka halwa)",
+      "unit": "bowl",
+      "aliases": [
+        "Gajar ka halwa"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC296",
+      "name": "Egg halwa (Ande ka halwa)",
+      "unit": "bowl",
+      "aliases": [
+        "Ande ka halwa"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC297",
+      "name": "Potato halwa (Aloo ka halwa)",
+      "unit": "bowl",
+      "aliases": [
+        "Aloo ka halwa"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC298",
+      "name": "Pumpkin halwa (Kaddu ka halwa)",
+      "unit": "bowl",
+      "aliases": [
+        "Kaddu ka halwa"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC299",
+      "name": "Moong dal halwa",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC300",
+      "name": "Caramel custard (steamed)",
+      "unit": "bowl",
+      "aliases": [
+        "steamed"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC301",
+      "name": "Baked custard",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC302",
+      "name": "Soft Custard (stirred)",
+      "unit": "bowl",
+      "aliases": [
+        "stirred"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC304",
+      "name": "Chocolate ice cream",
+      "unit": "ice-cream cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC305",
+      "name": "Mango ice cream",
+      "unit": "ice-cream cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC307",
+      "name": "Fruit Ice cream (Phalon ka Ice cream)",
+      "unit": "ice-cream cup",
+      "aliases": [
+        "Phalon ka Ice cream"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC308",
+      "name": "Caramel ice cream",
+      "unit": "ice-cream cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC309",
+      "name": "Lemon souffle",
+      "unit": "souffle cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC310",
+      "name": "Orange souffle",
+      "unit": "souffle cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC311",
+      "name": "Vanilla souffle",
+      "unit": "souffle cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC312",
+      "name": "Chocolate souffle",
+      "unit": "souffle cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC313",
+      "name": "Pineapple souffle",
+      "unit": "souffle cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC314",
+      "name": "Apple mousse",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC315",
+      "name": "Rich chocolate mousse",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC316",
+      "name": "Mango mousse",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC317",
+      "name": "Orange and pineapple cream",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC318",
+      "name": "Charlotte rousse",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC319",
+      "name": "Triffle pudding",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC320",
+      "name": "Snow flakes pudding",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC321",
+      "name": "Kulfi",
+      "unit": "kulfi",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC322",
+      "name": "Steamed orange pudding",
+      "unit": "large slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC323",
+      "name": "Meringue and rice pudding",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC324",
+      "name": "Cheese pudding",
+      "unit": "large slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC325",
+      "name": "Chocolate pudding",
+      "unit": "large slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC326",
+      "name": "Bread and butter pudding",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC327",
+      "name": "Queen of pudding",
+      "unit": "large slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC328",
+      "name": "Pineapple upside down pudding",
+      "unit": "large slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC329",
+      "name": "Date and nut pie",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC330",
+      "name": "Stewed apple with custard",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC331",
+      "name": "Apple snowballs",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC332",
+      "name": "Hot orange souffle",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC333",
+      "name": "Hot chocolate souffle",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC334",
+      "name": "Hot vanilla souffle",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC335",
+      "name": "Plain burfi (Burfi)",
+      "unit": "burfi",
+      "aliases": [
+        "Burfi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC336",
+      "name": "Coconut burfi (Nariyal ki burfi)",
+      "unit": "burfi",
+      "aliases": [
+        "Nariyal ki burfi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC337",
+      "name": "Bottle gourd burfi (Ghiya/Lauki burfi)",
+      "unit": "burfi",
+      "aliases": [
+        "Ghiya/Lauki burfi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC338",
+      "name": "Chocolate burfi",
+      "unit": "burfi",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC339",
+      "name": "Cashewnut burfi (Kaju burfi/Kaju katli)",
+      "unit": "burfi",
+      "aliases": [
+        "Kaju burfi/Kaju katli"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC340",
+      "name": "Gram flour burfi (Besan burfi)",
+      "unit": "burfi",
+      "aliases": [
+        "Besan burfi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC341",
+      "name": "Semolina ladoo with khoya (Suji/Rava aur khoye ke ladoo )",
+      "unit": "ladoo",
+      "aliases": [
+        "Suji/Rava aur khoye ke ladoo "
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC342",
+      "name": "Semolina ladoo with coconut (Suji/Rava aur nariyal ke ladoo )",
+      "unit": "ladoo",
+      "aliases": [
+        "Suji/Rava aur nariyal ke ladoo "
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC343",
+      "name": "Gram flour ladoo (Besan ladoo)",
+      "unit": "ladoo",
+      "aliases": [
+        "Besan ladoo"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC344",
+      "name": "Sesame ladoo (Til ke ladoo)",
+      "unit": "ladoo",
+      "aliases": [
+        "Til ke ladoo"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC345",
+      "name": "Chenna murki",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC346",
+      "name": "Milk cake",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC347",
+      "name": "Ghujia/Lavang latika",
+      "unit": "gunjia",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC348",
+      "name": "Gulab Jamun with khoya",
+      "unit": "gulab jamun",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC349",
+      "name": "Mal pua",
+      "unit": "malqura",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC350",
+      "name": "Shahi tukre",
+      "unit": "tukra",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC351",
+      "name": "Potato pakora/pakoda (Aloo pakoda)",
+      "unit": "plate",
+      "aliases": [
+        "Aloo pakoda"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC352",
+      "name": "Onion pakora/pakoda (Pyaaz ke pakode)",
+      "unit": "plate",
+      "aliases": [
+        "Pyaaz ke pakode"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC353",
+      "name": "Cauliflower pakora/pakoda (Phoolgobhi ke pakode)",
+      "unit": "plate",
+      "aliases": [
+        "Phoolgobhi ke pakode"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC354",
+      "name": "Mixed vegetable pakora/pakoda",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC355",
+      "name": "Spinach pakora/pakoda (Palak pakoda)",
+      "unit": "plate",
+      "aliases": [
+        "Palak pakoda"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC356",
+      "name": "Methi pakora/pakoda (Methi ke pakode)",
+      "unit": "plate",
+      "aliases": [
+        "Methi ke pakode"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC357",
+      "name": "Egg pakora/pakoda (Ande ke pakode)",
+      "unit": "plate",
+      "aliases": [
+        "Ande ke pakode"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC358",
+      "name": "Bread pakora/pakoda",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC359",
+      "name": "Paneer pakora/pakoda",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC360",
+      "name": "Potato bonda (Aloo bonda)",
+      "unit": "bonda",
+      "aliases": [
+        "Aloo bonda"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC361",
+      "name": "Potato samosa (Aloo ka samosa)",
+      "unit": "samosa",
+      "aliases": [
+        "Aloo ka samosa"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC362",
+      "name": "Minced meat samosa (Keema ka samosa)",
+      "unit": "samosa",
+      "aliases": [
+        "Keema ka samosa"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC363",
+      "name": "Paneer and pea samosa (Paneer matar ka samosa)",
+      "unit": "samosa",
+      "aliases": [
+        "Paneer matar ka samosa"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC364",
+      "name": "Mathri",
+      "unit": "kachori",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC365",
+      "name": "Khasta kachori",
+      "unit": "kachori",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC366",
+      "name": "Vegetable cutlet",
+      "unit": "cutlet",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC367",
+      "name": "Flattened rice cutlet (Chirwa cutlet/Chivda cutlet/Poha cutlet)",
+      "unit": "cutlet",
+      "aliases": [
+        "Chirwa cutlet/Chivda cutlet/Poha cutlet"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC368",
+      "name": "Peanut cutlet (Mungfali ke cutlet)",
+      "unit": "cutlet",
+      "aliases": [
+        "Mungfali ke cutlet"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC369",
+      "name": "Fish cutlet (Machli ka cutlet)",
+      "unit": "cutlet",
+      "aliases": [
+        "Machli ka cutlet"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC370",
+      "name": "Paneer potato cutlet (Paneer aloo cutlet)",
+      "unit": "cutlet",
+      "aliases": [
+        "Paneer aloo cutlet"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC371",
+      "name": "Spinach chickpeas cutlet (Palak channa dal cutlet)",
+      "unit": "cutlet",
+      "aliases": [
+        "Palak channa dal cutlet"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC372",
+      "name": "Cheese toast",
+      "unit": "toast",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC375",
+      "name": "Vegetable burger",
+      "unit": "burger",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC376",
+      "name": "Cheese pizza",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC377",
+      "name": "Vegetable seekh kebab",
+      "unit": "kabab",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC378",
+      "name": "Masala vada",
+      "unit": "vada",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC379",
+      "name": "Peanut sago vada (Sabudana mungfali vada)",
+      "unit": "vada",
+      "aliases": [
+        "Sabudana mungfali vada"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC380",
+      "name": "Vegeterian scotch egg",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC381",
+      "name": "Paneer shaslik/tikka",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC382",
+      "name": "Peanut brittle (Moongfali ki chikki)",
+      "unit": "piece",
+      "aliases": [
+        "Moongfali ki chikki"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC383",
+      "name": "Spring roll",
+      "unit": "spring roll",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC384",
+      "name": "Dry mango chutney (Sookhe aam ki chutney)",
+      "unit": "tablespoon",
+      "aliases": [
+        "Sookhe aam ki chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC385",
+      "name": "Peanut chutney (Mungfali ki chutney)",
+      "unit": "tablespoon",
+      "aliases": [
+        "Mungfali ki chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC386",
+      "name": "Coconut chutney (Nariyal ki chutney)",
+      "unit": "tablespoon",
+      "aliases": [
+        "Nariyal ki chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC387",
+      "name": "Mint and coriander chutney (Pudinay aur dhaniye ki chutney)",
+      "unit": "tablespoon",
+      "aliases": [
+        "Pudinay aur dhaniye ki chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC395",
+      "name": "Custard tart",
+      "unit": "tart",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC396",
+      "name": "Lemon tart",
+      "unit": "tart",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC397",
+      "name": "Jam tart",
+      "unit": "tart",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC398",
+      "name": "Orange cream tart",
+      "unit": "tart",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC399",
+      "name": "Pineapple tart",
+      "unit": "tart",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC400",
+      "name": "Cheese and mushroom tart",
+      "unit": "tart",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC401",
+      "name": "Cottage cheese pie",
+      "unit": "pie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC402",
+      "name": "Minced meat pie",
+      "unit": "pie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC403",
+      "name": "Apple cinnamon pie",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC404",
+      "name": "Lemon meringue pie",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC405",
+      "name": "Chocolate meringue pie",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC407",
+      "name": "Cream puffs",
+      "unit": "puff",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC408",
+      "name": "Chocolate eclairs",
+      "unit": "éclair",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC409",
+      "name": "Cheese balls",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC411",
+      "name": "Minced meat patties",
+      "unit": "patty",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC412",
+      "name": "Cheese patties",
+      "unit": "patty",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC413",
+      "name": "Hot cheese souffle",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC414",
+      "name": "Hot potato souffle",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC415",
+      "name": "Hot fish souffle",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC416",
+      "name": "Hot spinach souffle",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC417",
+      "name": "Plain cream cake",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC418",
+      "name": "Apple cake (Seb ka cake)",
+      "unit": "piece",
+      "aliases": [
+        "Seb ka cake"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC419",
+      "name": "Marble cake",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC420",
+      "name": "Chocolate cake",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC421",
+      "name": "Orange cake",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC422",
+      "name": "Fruit Loaf",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC423",
+      "name": "Banana cake (Kele ka cake)",
+      "unit": "slice",
+      "aliases": [
+        "Kele ka cake"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC424",
+      "name": "Chocolate chiffon cake",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC425",
+      "name": "Christmas cake",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC426",
+      "name": "Strawberry and vanilla cake with butter icing",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC427",
+      "name": "Eggless cake",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC429",
+      "name": "Swiss roll",
+      "unit": "swiss roll",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC430",
+      "name": "Pineapple pastry",
+      "unit": "pastry",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC431",
+      "name": "Black forest pastry",
+      "unit": "pastry",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC432",
+      "name": "Coconut finger",
+      "unit": "finger",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC433",
+      "name": "Pineapple cake",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC439",
+      "name": "Chocolate walnut cookies (Chocolate aur akhrot ke cookies)",
+      "unit": "cookie",
+      "aliases": [
+        "Chocolate aur akhrot ke cookies"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC440",
+      "name": "Chocolate chip cookies",
+      "unit": "cookie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC441",
+      "name": "Sweet plain biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC442",
+      "name": "Chocolate biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC443",
+      "name": "Coconut biscuit (Nariyal ke biscuit)",
+      "unit": "biscuit",
+      "aliases": [
+        "Nariyal ke biscuit"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC444",
+      "name": "Sweet and salty biscuit (Meethay aur namkeen biscuit)",
+      "unit": "biscuit",
+      "aliases": [
+        "Meethay aur namkeen biscuit"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC445",
+      "name": "Peanut biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC446",
+      "name": "Pin wheel biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC447",
+      "name": "Saffron biscuit (Kesar biscuit)",
+      "unit": "biscuit",
+      "aliases": [
+        "Kesar biscuit"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC448",
+      "name": "Masala biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC449",
+      "name": "Ice box cookies",
+      "unit": "cookie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC450",
+      "name": "Ginger bread man",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC451",
+      "name": "Danish cookies",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC452",
+      "name": "Short bread cookies",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC453",
+      "name": "Coffee biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC454",
+      "name": "Melting moments",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC455",
+      "name": "Ginger biscuit (Adarak ke biscuit)",
+      "unit": "biscuit",
+      "aliases": [
+        "Adarak ke biscuit"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC456",
+      "name": "Soyabean muthias",
+      "unit": "muthia",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC457",
+      "name": "Soyabean tikki",
+      "unit": "tikki",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC458",
+      "name": "Soyabean namak paras",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC459",
+      "name": "Peanut burfi (Moongfali ki burfi)",
+      "unit": "burfi",
+      "aliases": [
+        "Moongfali ki burfi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC460",
+      "name": "Spinach peanut namak paras (Palak moongfali namak paras)",
+      "unit": "plate",
+      "aliases": [
+        "Palak moongfali namak paras"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC461",
+      "name": "Gram flour and semolina chilla/cheela/savory pancake (Besan suji chilla/cheela)",
+      "unit": "cheela",
+      "aliases": [
+        "Besan suji chilla/cheela"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC462",
+      "name": "Rice moong dal cheela (Chawal aur moong dal ka cheela)",
+      "unit": "cheela",
+      "aliases": [
+        "Chawal aur moong dal ka cheela"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC463",
+      "name": "Split bengal gram sweet rice (Channa dal sweet rice)",
+      "unit": "plate",
+      "aliases": [
+        "Channa dal sweet rice"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC464",
+      "name": "Sweet poori (Meethi poori)",
+      "unit": "poori",
+      "aliases": [
+        "Meethi poori"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC465",
+      "name": "Wheat flour and moong dal burfi (Atta aur moong dal ki burfi)",
+      "unit": "piece",
+      "aliases": [
+        "Atta aur moong dal ki burfi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC466",
+      "name": "Spinach burfi (Palak burfi)",
+      "unit": "piece",
+      "aliases": [
+        "Palak burfi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC467",
+      "name": "Sweet split chickpea roti (Sweet channa dal roti/Puranpoli)",
+      "unit": "roti",
+      "aliases": [
+        "Sweet channa dal roti/Puranpoli",
+        "chapati",
+        "chapatti",
+        "phulka",
+        "roti"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC468",
+      "name": "Sprouted moong daliya",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC469",
+      "name": "Sprouted moong poha",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC470",
+      "name": "Pearl millet ladoo (Bajra ladoo)",
+      "unit": "ladoo",
+      "aliases": [
+        "Bajra ladoo"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC471",
+      "name": "Paushtik ladoo",
+      "unit": "ladoo",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC472",
+      "name": "Paushtik roti",
+      "unit": "roti",
+      "aliases": [
+        "chapati",
+        "chapatti",
+        "phulka",
+        "roti"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC473",
+      "name": "Semolina carrot vada (Suji gajar vada)",
+      "unit": "vada",
+      "aliases": [
+        "Suji gajar vada"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "ASC474",
+      "name": "Dhokla",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP007",
+      "name": "Kashmiri tea (Kehwa)",
+      "unit": "tea cup",
+      "aliases": [
+        "Kehwa"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP008",
+      "name": "Steeped hot coffee",
+      "unit": "tea cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP011",
+      "name": "Hot chocolate",
+      "unit": "tea cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP013",
+      "name": "Cold coffee (with cream)",
+      "unit": "tall glass",
+      "aliases": [
+        "with cream"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP015",
+      "name": "Banana milkshake with ice cream (Kele ka milkshake ice cream ke saath)",
+      "unit": "tall glass",
+      "aliases": [
+        "Kele ka milkshake ice cream ke saath"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP019",
+      "name": "Flavoured milkshake",
+      "unit": "tall glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP024",
+      "name": "Jal jeera",
+      "unit": "juice glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP026",
+      "name": "Gingo",
+      "unit": "tall glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP027",
+      "name": "Mintade",
+      "unit": "glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP029",
+      "name": "Canjee",
+      "unit": "glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP030",
+      "name": "Cauliflower canjee (Phoolgobhi ki canjee)",
+      "unit": "glass",
+      "aliases": [
+        "Phoolgobhi ki canjee"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP031",
+      "name": "Potato canjee (Aloo canjee)",
+      "unit": "glass",
+      "aliases": [
+        "Aloo canjee"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP036",
+      "name": "Vermicelli porridge (Semiya/Seviyan porridge)",
+      "unit": "bowl",
+      "aliases": [
+        "Semiya/Seviyan porridge"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP039",
+      "name": "Semolina upma (Suji/Rava upma)",
+      "unit": "bowl",
+      "aliases": [
+        "Suji/Rava upma"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP040",
+      "name": "Vermicelli upma (Semiya/Seviyan upma)",
+      "unit": "bowl",
+      "aliases": [
+        "Semiya/Seviyan upma"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP041",
+      "name": "Rice upma",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP042",
+      "name": "Bread upma",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP043",
+      "name": "Vegetable upma",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP044",
+      "name": "Poha",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP045",
+      "name": "Vegetable poha",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP046",
+      "name": "Moong dal stuffed cheela/chilla (Moong dal ka cheela/chilla)",
+      "unit": "cheela",
+      "aliases": [
+        "Moong dal ka cheela/chilla"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP047",
+      "name": "Paneer stuffed cheela/chilla",
+      "unit": "cheela",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP052",
+      "name": "Indian style egg bhujia (Anda bhujia (Indian style))",
+      "unit": "small bowl",
+      "aliases": [
+        "Anda bhujia (Indian style"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP054",
+      "name": "French omelette/omlet",
+      "unit": "egg",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP055",
+      "name": "Puffy omelette/omlet",
+      "unit": "egg",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP056",
+      "name": "Orange omelette/omlet",
+      "unit": "egg",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP057",
+      "name": "Cheese and mushroom omelette/omlet",
+      "unit": "egg",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP058",
+      "name": "Spanish omelette/omlet",
+      "unit": "egg",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP059",
+      "name": "Mixed stock",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP060",
+      "name": "Meat stock",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP062",
+      "name": "White stock",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP065",
+      "name": "Meat consomme (with mutton)",
+      "unit": "bowl",
+      "aliases": [
+        "with mutton"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP066",
+      "name": "Consomme au julienne",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP067",
+      "name": "Consomme au vermicelli",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP072",
+      "name": "Green pea soup (Matar ka soup)",
+      "unit": "bowl",
+      "aliases": [
+        "Matar ka soup"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP073",
+      "name": "Spinach soup (Palak ka soup)",
+      "unit": "bowl",
+      "aliases": [
+        "Palak ka soup"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP074",
+      "name": "Mixed vegetable soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP075",
+      "name": "Cheese soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP076",
+      "name": "Mulligatawny soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP079",
+      "name": "Cream of carrot soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP080",
+      "name": "Cream of broccoli soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP082",
+      "name": "Cream of potato soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP087",
+      "name": "Almond soup (Badam ka soup)",
+      "unit": "bowl",
+      "aliases": [
+        "Badam ka soup"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP088",
+      "name": "Cold cucumber cream soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP089",
+      "name": "Cold tomato soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP090",
+      "name": "Chicken stew",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP091",
+      "name": "Veg paneer stew",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP108",
+      "name": "Onion-green chilli parantha/paratha (Pyaaz aur hari mirch ka parantha/paratha)",
+      "unit": "parantha",
+      "aliases": [
+        "Pyaaz aur hari mirch ka parantha/paratha"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP110",
+      "name": "Methi parantha/paratha",
+      "unit": "parantha",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP114",
+      "name": "Bathua poori",
+      "unit": "poori",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP115",
+      "name": "Gram flour poori (Besan poori)",
+      "unit": "poori",
+      "aliases": [
+        "Besan poori"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP116",
+      "name": "Beetroot poori (Chukandar ki poori)",
+      "unit": "poori",
+      "aliases": [
+        "Chukandar ki poori"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP117",
+      "name": "Peas poori (Matar ki poori)",
+      "unit": "poori",
+      "aliases": [
+        "Matar ki poori"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP118",
+      "name": "Peas kachori (Matar kachori)",
+      "unit": "kachori",
+      "aliases": [
+        "Matar kachori"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP122",
+      "name": "Pizza",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP124",
+      "name": "Bacon and mushroom pancake",
+      "unit": "pancake",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP125",
+      "name": "Cheese and tomato pancake",
+      "unit": "pancake",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP127",
+      "name": "Minced meat pancake (with chicken)",
+      "unit": "pancake",
+      "aliases": [
+        "with chicken"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP132",
+      "name": "Eggplant/Brinjal rice (Vangi bhat)",
+      "unit": "plate",
+      "aliases": [
+        "Vangi bhat"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP133",
+      "name": "Kashmiri 'tahar'",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP134",
+      "name": "Cumin pulao (Jeera/Zeera pulao)",
+      "unit": "plate",
+      "aliases": [
+        "Jeera/Zeera pulao"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP136",
+      "name": "Peas pulao (Matar pulao)",
+      "unit": "plate",
+      "aliases": [
+        "Matar pulao"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP137",
+      "name": "Split bengal gram dal and vegetable pulao (Channa dal and vegetable pulao)",
+      "unit": "plate",
+      "aliases": [
+        "Channa dal and vegetable pulao"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP138",
+      "name": "Black channa pulao/ Bengal gram pulao (Kale chane ka pulao)",
+      "unit": "plate",
+      "aliases": [
+        "Kale chane ka pulao"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP141",
+      "name": "Mutton pulao",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP142",
+      "name": "Chicken pulao",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP143",
+      "name": "Mexican rice",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP144",
+      "name": "Plain khitchdi (Plain khichri/khichdi)",
+      "unit": "small bowl",
+      "aliases": [
+        "Plain khichri/khichdi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP147",
+      "name": "Instant idli (with semolina)",
+      "unit": "idli",
+      "aliases": [
+        "with semolina"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP148",
+      "name": "Plain dosa",
+      "unit": "dosa",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP150",
+      "name": "Masala dosa mixed vegetable fillings",
+      "unit": "dosa",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP151",
+      "name": "Masala dosa paneer fillings",
+      "unit": "dosa",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP152",
+      "name": "Uttapam",
+      "unit": "uttapam",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP153",
+      "name": "Appam",
+      "unit": "appam",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP154",
+      "name": "Beans and macaroni",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP155",
+      "name": "Spaghetti bolognese",
+      "unit": "shallow dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP157",
+      "name": "Meat and macaroni casserole",
+      "unit": "small casserole dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP158",
+      "name": "Spaghetti with meat balls and tomato sauce",
+      "unit": "shallow dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP159",
+      "name": "Spaghetti with paneer balls and tomato sauce",
+      "unit": "shallow dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP161",
+      "name": "Lasagne with meat sauce",
+      "unit": "dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP162",
+      "name": "Lasagne with vegetables",
+      "unit": "dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP165",
+      "name": "Home made egg noodles",
+      "unit": "curry bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP170",
+      "name": "Sour lentils (Khatti dal)",
+      "unit": "curry bowl",
+      "aliases": [
+        "Khatti dal"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP171",
+      "name": "Urad special dehusked",
+      "unit": "curry bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP172",
+      "name": "Arhar with spinach (Arhar dal aur palak)",
+      "unit": "curry bowl",
+      "aliases": [
+        "Arhar dal aur palak"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP174",
+      "name": "Moong dal with vadi",
+      "unit": "curry bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP176",
+      "name": "Rasam with tamarind (Puli rasam/ Chintapandu rasam/ Charu/Saaru)",
+      "unit": "curry bowl",
+      "aliases": [
+        "Puli rasam/ Chintapandu rasam/ Charu/Saaru"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP177",
+      "name": "Rasam with lemon (Nimmakaya rasam/Nimmakaya charu/Elumichai rasam/Nimbe hannina saaru)",
+      "unit": "curry bowl",
+      "aliases": [
+        "Nimmakaya rasam/Nimmakaya charu/Elumichai rasam/Nimbe hannina saaru"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP178",
+      "name": "Green gram whole with baghar (Sabut moong dal with tadka)",
+      "unit": "bowl",
+      "aliases": [
+        "Sabut moong dal with tadka"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP179",
+      "name": "Urad sabut special",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP185",
+      "name": "Kabuli channa curry",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP187",
+      "name": "Besan gatte curry",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP190",
+      "name": "Dry masala chops",
+      "unit": "chops",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP194",
+      "name": "Mutton korma",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP196",
+      "name": "Shahi keema kofta curry",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP197",
+      "name": "Minced meat ball curry",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP198",
+      "name": "Boti kebab",
+      "unit": "kebab",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP199",
+      "name": "Mutton seekh kebab",
+      "unit": "kebab",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP201",
+      "name": "Indian lamb and egg curry (Nargisi kofta)",
+      "unit": "kofta",
+      "aliases": [
+        "Nargisi kofta"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP203",
+      "name": "Soya chunks sweet and sour (Nutrinugget sweet and sour)",
+      "unit": "bowl",
+      "aliases": [
+        "Nutrinugget sweet and sour"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP204",
+      "name": "Soya chunks korma (Nutrinugget korma)",
+      "unit": "bowl",
+      "aliases": [
+        "Nutrinugget korma"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP205",
+      "name": "Mushroom matar",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP206",
+      "name": "Soya chunks and peas (Nutrinugget matar)",
+      "unit": "bowl",
+      "aliases": [
+        "Nutrinugget matar"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP207",
+      "name": "Vegetable yakhni",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP208",
+      "name": "Spinach mushroom (Palak mushroom)",
+      "unit": "bowl",
+      "aliases": [
+        "Palak mushroom"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP210",
+      "name": "Vegetarian nargisi kofta curry",
+      "unit": "kofta",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP212",
+      "name": "Roast chicken",
+      "unit": "joint",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP214",
+      "name": "Shahi chicken masala",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP216",
+      "name": "Tomato chicken",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP217",
+      "name": "Creamy chicken",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP218",
+      "name": "Broccoli chicken ala king",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP220",
+      "name": "Ginger chicken",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP221",
+      "name": "Chicken sweet and sour",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP222",
+      "name": "Chicken korma",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP223",
+      "name": "Bengal fish curry (Bengali machli curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Bengali machli curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP226",
+      "name": "Fish finger",
+      "unit": "fillet",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP229",
+      "name": "Fish in coconut milk (Nariyal ke doodh ke saath machli)",
+      "unit": "dish",
+      "aliases": [
+        "Nariyal ke doodh ke saath machli"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP230",
+      "name": "Prawn curry (with coconut) (Jhinga curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Jhinga curry",
+        "with coconut"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP231",
+      "name": "Baked stuffed fish",
+      "unit": "fish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP232",
+      "name": "Fish pie",
+      "unit": "pie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP233",
+      "name": "Crispy baked fish",
+      "unit": "casserole dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP234",
+      "name": "Fish souffle",
+      "unit": "dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP239",
+      "name": "Potato curry (Aloo ki sabzi)",
+      "unit": "bowl",
+      "aliases": [
+        "Aloo ki sabzi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP240",
+      "name": "Egg curry (Anda curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Anda curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP241",
+      "name": "Vegetable curry with coconut",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP242",
+      "name": "Curd with potatoes (Dahi aloo)",
+      "unit": "bowl",
+      "aliases": [
+        "Dahi aloo",
+        "curd",
+        "dahi",
+        "yoghurt",
+        "yogurt"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP246",
+      "name": "Potato kofta curry (Aloo kofta curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Aloo kofta curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP249",
+      "name": "Yam kofta curry (Zimikand/Suran kofta curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Zimikand/Suran kofta curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP250",
+      "name": "Jackfruit kofta curry (Kathal ka kofta curry)",
+      "unit": "bowl",
+      "aliases": [
+        "Kathal ka kofta curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP257",
+      "name": "Spinach and potato (Palak aloo)",
+      "unit": "bowl",
+      "aliases": [
+        "Palak aloo"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP258",
+      "name": "Mooli bhujia",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP259",
+      "name": "Bathua bhujia",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP261",
+      "name": "Cabbage rolls (dry) ((Pattagobhi rolls) (dry))",
+      "unit": "roll",
+      "aliases": [
+        "(Pattagobhi rolls",
+        "dry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP262",
+      "name": "Cabbage rolls (curry) ((Pattagobhi rolls)(curry))",
+      "unit": "roll",
+      "aliases": [
+        "(Pattagobhi rolls",
+        "curry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP263",
+      "name": "Dry arbi (Sookhi arbi)",
+      "unit": "bowl",
+      "aliases": [
+        "Sookhi arbi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP264",
+      "name": "Masala arbi",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP266",
+      "name": "Peas brinjal bhartha (Matar baingan bhartha)",
+      "unit": "small bowl",
+      "aliases": [
+        "Matar baingan bhartha"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP269",
+      "name": "Okra/Lady's fingers fry (Bhindi sabzi/sabji/subji)",
+      "unit": "bowl",
+      "aliases": [
+        "Bhindi sabzi/sabji/subji"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP270",
+      "name": "Crispy okra/Crispy lady's fingers (Karare bhindi)",
+      "unit": "small bowl",
+      "aliases": [
+        "Karare bhindi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP272",
+      "name": "Beans foogath",
+      "unit": "small bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP273",
+      "name": "Stuffed bittergourd (wet) (Bharwa karele)",
+      "unit": "bowl",
+      "aliases": [
+        "Bharwa karele",
+        "wet"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP274",
+      "name": "Jackfruit/Kathal (dry)",
+      "unit": "bowl",
+      "aliases": [
+        "dry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP275",
+      "name": "Yam fried (Zimikand/Suran fried)",
+      "unit": "bowl",
+      "aliases": [
+        "Zimikand/Suran fried"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP276",
+      "name": "Cauliflower, pea and potato bhujia (Phoolgobhi, matar aur aloo bhujia)",
+      "unit": "bowl",
+      "aliases": [
+        "Phoolgobhi, matar aur aloo bhujia"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP277",
+      "name": "Vegetable jalfrezi",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP278",
+      "name": "Vegetables stir fry",
+      "unit": "small bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP279",
+      "name": "Broccoli delight",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP280",
+      "name": "Dhansak (vegetarian)",
+      "unit": "bowl",
+      "aliases": [
+        "vegetarian"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP282",
+      "name": "Cauliflower basket",
+      "unit": "portion",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP284",
+      "name": "Stuffed bottle gourd (Stuffed ghiya/lauki)",
+      "unit": "portion",
+      "aliases": [
+        "Stuffed ghiya/lauki"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP286",
+      "name": "Ducheese potato",
+      "unit": "potato",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP287",
+      "name": "Roast potatoes",
+      "unit": "potato",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP288",
+      "name": "Stuffed baked potatoes",
+      "unit": "potato",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP289",
+      "name": "Potato nests",
+      "unit": "nest",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP290",
+      "name": "Parsley potato",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP291",
+      "name": "Creamed spinach and mushroom",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP292",
+      "name": "Fricassee of Mushroom",
+      "unit": "dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP293",
+      "name": "Cauliflower au gratin",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP294",
+      "name": "Vegetable and cheese pie",
+      "unit": "dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP296",
+      "name": "Spinach souffle",
+      "unit": "small bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP299",
+      "name": "Beetroot and egg salad (Chukandar aur ande ka salad)",
+      "unit": "small bowl",
+      "aliases": [
+        "Chukandar aur ande ka salad"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP300",
+      "name": "Sour cream potato salad",
+      "unit": "small bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP301",
+      "name": "Tossed green salad",
+      "unit": "small bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP302",
+      "name": "Spring basket salad",
+      "unit": "basket",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP303",
+      "name": "Cucumber and yogurt salad (Kheere aur dahi ka salad)",
+      "unit": "small plate",
+      "aliases": [
+        "Kheere aur dahi ka salad",
+        "curd",
+        "dahi",
+        "yoghurt",
+        "yogurt"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP305",
+      "name": "Chicken and tomato towers",
+      "unit": "stuffed tomato",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP306",
+      "name": "Jellied sunshine fruit salad",
+      "unit": "small mould",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP307",
+      "name": "Tomato aspic",
+      "unit": "small mould",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP308",
+      "name": "Frozen frosty fruit salad (Phalon ka salaad)",
+      "unit": "slice",
+      "aliases": [
+        "Phalon ka salaad"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP310",
+      "name": "French dressing",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP312",
+      "name": "Mayonnaise without eggs",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP313",
+      "name": "Curd dressing",
+      "unit": "cup",
+      "aliases": [
+        "curd",
+        "dahi",
+        "yoghurt",
+        "yogurt"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP316",
+      "name": "Carrot raita (Gajar ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Gajar ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP318",
+      "name": "Pumpkin raita (Kaddu ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Kaddu ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP320",
+      "name": "Mint and peanut raita (Pudinay aur moongfali ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Pudinay aur moongfali ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP321",
+      "name": "Spinach raita (Palak ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Palak ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP322",
+      "name": "Bathua raita",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP325",
+      "name": "Pineapple raita (Ananas ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Ananas ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP326",
+      "name": "Banana raita (Kele ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Kele ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP327",
+      "name": "Mango raita (Aam ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Aam ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP328",
+      "name": "Guava raita (Amarood ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Amarood ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP329",
+      "name": "Grapes raita (Angoor ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Angoor ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP334",
+      "name": "Bottle gourd kheer (Ghiya/Lauki kheer)",
+      "unit": "bowl",
+      "aliases": [
+        "Ghiya/Lauki kheer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP336",
+      "name": "Pumpkin kheer (Kaddu ki kheer)",
+      "unit": "bowl",
+      "aliases": [
+        "Kaddu ki kheer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP338",
+      "name": "Apple kheer (Seb ki kheer)",
+      "unit": "bowl",
+      "aliases": [
+        "Seb ki kheer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP345",
+      "name": "Caramel custard (baked)",
+      "unit": "small bowl",
+      "aliases": [
+        "baked"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP346",
+      "name": "Vanilla ice cream without egg",
+      "unit": "ice cream cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP347",
+      "name": "Vanilla ice cream with egg",
+      "unit": "ice cream cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP348",
+      "name": "Strawberry ice cream",
+      "unit": "ice cream cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP350",
+      "name": "Chocochip ice cream",
+      "unit": "ice cream cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP351",
+      "name": "Choconut ice cream",
+      "unit": "sundae glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP352",
+      "name": "Pear chocholate sunday",
+      "unit": "sundae glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP353",
+      "name": "Chocolate sauce",
+      "unit": "tablespoon",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP354",
+      "name": "Coffee ice cream",
+      "unit": "ice cream cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP355",
+      "name": "Coffee pear alaska",
+      "unit": "dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP356",
+      "name": "Crunchy butterscotch",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP358",
+      "name": "Peach melba ice cream",
+      "unit": "sundae glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP359",
+      "name": "Vanilla ice cream with apples in hot cherry sauce",
+      "unit": "dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP361",
+      "name": "Grape and orange whip",
+      "unit": "orange case",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP362",
+      "name": "Honey banana cream",
+      "unit": "tall stemmed glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP363",
+      "name": "Raspberry bavarian cream",
+      "unit": "small mould",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP364",
+      "name": "Fruit delight",
+      "unit": "small mould",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP365",
+      "name": "Creamy chocolate mousse",
+      "unit": "dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP366",
+      "name": "Cold lemon souffle",
+      "unit": "souffle dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP367",
+      "name": "Cold orange souffle",
+      "unit": "souffle dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP368",
+      "name": "Cold pineapple souffle",
+      "unit": "souffle dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP369",
+      "name": "Cold vanilla souffle",
+      "unit": "souffle dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP370",
+      "name": "Cold chocolate souffle",
+      "unit": "souffle dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP371",
+      "name": "Stewed fruit (with pear)",
+      "unit": "bowl",
+      "aliases": [
+        "with pear"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP372",
+      "name": "Apricot fool",
+      "unit": "tall stemmed glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP373",
+      "name": "Pavlova",
+      "unit": "meringue",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP379",
+      "name": "Apple crumb pudding",
+      "unit": "small plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP380",
+      "name": "Steamed cake with chocolate sauce",
+      "unit": "small mould",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP382",
+      "name": "Hot lemon souffle",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP386",
+      "name": "Gulab jamun with milk powder",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP388",
+      "name": "Chum chum",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP389",
+      "name": "Dil bahar",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP390",
+      "name": "Rasbhari",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP391",
+      "name": "Rajbogh",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP392",
+      "name": "Rasgulla",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP393",
+      "name": "Rasmalai",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP396",
+      "name": "Khoa coconut burfi",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP397",
+      "name": "Danedar burfi",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP401",
+      "name": "Semolina burfi (Suji/Rava burfi)",
+      "unit": "piece",
+      "aliases": [
+        "Suji/Rava burfi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP403",
+      "name": "Pumpkin coconut burfi (Kaddu aur nariyal ki burfi)",
+      "unit": "piece",
+      "aliases": [
+        "Kaddu aur nariyal ki burfi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP404",
+      "name": "Khoa ladoo",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP406",
+      "name": "Wheat and gram flour ladoo (Atta besan ladoo)",
+      "unit": "piece",
+      "aliases": [
+        "Atta besan ladoo"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP407",
+      "name": "Semolina ladoo with nuts (Suji/Rava ladoo with nuts)",
+      "unit": "piece",
+      "aliases": [
+        "Suji/Rava ladoo with nuts"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP412",
+      "name": "Sesame chickpeas brittle (Til aur channe ki chikki)",
+      "unit": "piece",
+      "aliases": [
+        "Til aur channe ki chikki"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP413",
+      "name": "Murmura chikki",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP415",
+      "name": "Masala onion pakora/pakoda (Pyaaz ke pakode)",
+      "unit": "pakora",
+      "aliases": [
+        "Pyaaz ke pakode"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP416",
+      "name": "Masala green chilli pakora/pakoda (Hari mirch kay pakode)",
+      "unit": "pakora",
+      "aliases": [
+        "Hari mirch kay pakode"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP420",
+      "name": "Chicken pakora/pakoda",
+      "unit": "pakora",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP421",
+      "name": "Fish pakora/pakoda",
+      "unit": "pakora",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP424",
+      "name": "Paneer cutlet",
+      "unit": "cutlet",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP425",
+      "name": "Sago cutlet/vadas (Sabudana cutlet/vadas)",
+      "unit": "cutlet",
+      "aliases": [
+        "Sabudana cutlet/vadas"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP427",
+      "name": "Poshtik cutlet",
+      "unit": "cutlet",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP428",
+      "name": "Egg cutlet (Anda cutlet)",
+      "unit": "cutlet",
+      "aliases": [
+        "Anda cutlet"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP430",
+      "name": "Minced meat cutlet",
+      "unit": "cutlet",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP431",
+      "name": "Vegetable samosa",
+      "unit": "samosa",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP436",
+      "name": "Plain urad dal vada (Uzunne vada/Minapa garelu/Ulundu vadai/Medu vada)",
+      "unit": "vada",
+      "aliases": [
+        "Uzunne vada/Minapa garelu/Ulundu vadai/Medu vada"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP437",
+      "name": "Masala urad dal vada",
+      "unit": "vada",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP439",
+      "name": "Khaman (dhokla)",
+      "unit": "dhokla",
+      "aliases": [
+        "dhokla"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP440",
+      "name": "Instant dhokla",
+      "unit": "dhokla",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP442",
+      "name": "Tomato ginger chutney (Tamatar adarak ki chutney)",
+      "unit": "tablespoon",
+      "aliases": [
+        "Tamatar adarak ki chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP443",
+      "name": "Mint tomato chutney (Pudinay aur tamatar ki chutney)",
+      "unit": "tablespoon",
+      "aliases": [
+        "Pudinay aur tamatar ki chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP444",
+      "name": "Coriander chutney (Hare dhaniye ki chutney)",
+      "unit": "tablespoon",
+      "aliases": [
+        "Hare dhaniye ki chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP445",
+      "name": "Gooseberry chutney (Amla chutney)",
+      "unit": "tablespoon",
+      "aliases": [
+        "Amla chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP446",
+      "name": "Walnut chutney (Akhrot ki chutney)",
+      "unit": "tablespoon",
+      "aliases": [
+        "Akhrot ki chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP447",
+      "name": "Saunth/Sonth chutney with ginger",
+      "unit": "tablespoon",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP448",
+      "name": "Gun powder chutney",
+      "unit": "tablespoon",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP450",
+      "name": "Dessicated coconut chutney (Sookhe kase nariyal ki chutney)",
+      "unit": "tablespoon",
+      "aliases": [
+        "Sookhe kase nariyal ki chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP451",
+      "name": "Curd mint dip",
+      "unit": "tablespoon",
+      "aliases": [
+        "curd",
+        "dahi",
+        "yoghurt",
+        "yogurt"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP452",
+      "name": "Curd vegetable dip",
+      "unit": "tablespoon",
+      "aliases": [
+        "curd",
+        "dahi",
+        "yoghurt",
+        "yogurt"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP453",
+      "name": "Mayonnaise vegetable dip",
+      "unit": "tablespoon",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP455",
+      "name": "Tomato and cucumber sandwich (Tamatar aur kheere ka sandwich)",
+      "unit": "sandwich",
+      "aliases": [
+        "Tamatar aur kheere ka sandwich"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP456",
+      "name": "Tomato sandwich (grilled)",
+      "unit": "sandwich",
+      "aliases": [
+        "grilled"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP457",
+      "name": "French sandwich (toasted)",
+      "unit": "sandwich",
+      "aliases": [
+        "toasted"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP458",
+      "name": "Peanut butter cucumber sandwich",
+      "unit": "sandwich",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP459",
+      "name": "Mint and peanut sandwich",
+      "unit": "sandwich",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP460",
+      "name": "Spicy chutney sandwich",
+      "unit": "sandwich",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP461",
+      "name": "Chicken walnut sandwich (Chicken aur akhrot ke sandwich)",
+      "unit": "sandwich",
+      "aliases": [
+        "Chicken aur akhrot ke sandwich"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP463",
+      "name": "Rolled sandwich",
+      "unit": "sandwich",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP466",
+      "name": "Ribbon sandwich",
+      "unit": "ribbon",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP467",
+      "name": "Checker board sandwich",
+      "unit": "square",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP468",
+      "name": "Submarine sandwich",
+      "unit": "hot dog bun",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP470",
+      "name": "Cheese open sandwich",
+      "unit": "sandwich",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP471",
+      "name": "Sunset and sunrise open sandwich",
+      "unit": "sandwich",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP472",
+      "name": "Danish luncheon sandwich",
+      "unit": "sandwich",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP473",
+      "name": "Chicken and corn open sandwich",
+      "unit": "sandwich",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP476",
+      "name": "Chocolate sponge cake",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP478",
+      "name": "Chocolate swiss roll",
+      "unit": "swiss roll",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP479",
+      "name": "Lemon curd filling",
+      "unit": "tablespoon",
+      "aliases": [
+        "curd",
+        "dahi",
+        "yoghurt",
+        "yogurt"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP480",
+      "name": "Jam filling",
+      "unit": "tablespoon",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP482",
+      "name": "Chocolate pastry",
+      "unit": "pastry",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP483",
+      "name": "Assorted pastry",
+      "unit": "pastry",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP484",
+      "name": "Orange gateau",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP485",
+      "name": "Black forest gateau",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP489",
+      "name": "Lemon cake",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP491",
+      "name": "Dundee cake",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP492",
+      "name": "Victorian sandwich cake",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP495",
+      "name": "Chocolate eggless cake",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP496",
+      "name": "Orange eggless cake",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP498",
+      "name": "Chocolate glace icing",
+      "unit": "tablespoon",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP499",
+      "name": "Butter icing",
+      "unit": "tablespoon",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP500",
+      "name": "Chocolate butter icing",
+      "unit": "tablespoon",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP502",
+      "name": "Almond biscuit (Badam ke biscuit)",
+      "unit": "biscuit",
+      "aliases": [
+        "Badam ke biscuit"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP505",
+      "name": "Orange biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP506",
+      "name": "Gingerman biscuit",
+      "unit": "gingerman",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP507",
+      "name": "Coffee drops",
+      "unit": "small",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP508",
+      "name": "Christmas biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP509",
+      "name": "Christmas wreath biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP510",
+      "name": "Christmas bell biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP511",
+      "name": "Christmas star biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP512",
+      "name": "Christmas tree biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP513",
+      "name": "Chocolate cream shells",
+      "unit": "shell",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP516",
+      "name": "Jelly biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP517",
+      "name": "Cherry and walnut cookies",
+      "unit": "cookies",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP518",
+      "name": "Cheese straws",
+      "unit": "straw",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP519",
+      "name": "Butterfly biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP521",
+      "name": "Flan pastry",
+      "unit": "pastry",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP522",
+      "name": "Fruit flan",
+      "unit": "flan",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP523",
+      "name": "Orange cream flan",
+      "unit": "flan",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP527",
+      "name": "Fruit puree tart",
+      "unit": "tart",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP529",
+      "name": "Apple banana pie",
+      "unit": "pie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP531",
+      "name": "Lemon chiffon pie",
+      "unit": "pie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP532",
+      "name": "Orange chiffon pie",
+      "unit": "pie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP534",
+      "name": "Cream buns",
+      "unit": "bun",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP535",
+      "name": "Savoury puffs",
+      "unit": "puff",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP536",
+      "name": "Choux swans",
+      "unit": "swan",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP539",
+      "name": "Potato aigrettes",
+      "unit": "aigrette",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP541",
+      "name": "Cream horns",
+      "unit": "horn",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP542",
+      "name": "Savoury cheese horns",
+      "unit": "horn",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP544",
+      "name": "Paneer patties",
+      "unit": "patty",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP545",
+      "name": "Vegetable patties",
+      "unit": "patty",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP561",
+      "name": "Split bengal gram burfi/fudge (Channa dal burfi)",
+      "unit": "piece",
+      "aliases": [
+        "Channa dal burfi"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP563",
+      "name": "Chickpea flour cookies (Sweet besan rounds/cookies)",
+      "unit": "piece",
+      "aliases": [
+        "Sweet besan rounds/cookies"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP564",
+      "name": "Pearl millet mathri (Bajra mathri)",
+      "unit": "piece",
+      "aliases": [
+        "Bajra mathri"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP565",
+      "name": "Sesame biscuit (Til ke biscuit)",
+      "unit": "biscuit",
+      "aliases": [
+        "Til ke biscuit"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP566",
+      "name": "Fermented bengal gram vada (Khameerikrit/Ufna hua channa dal ka vada)",
+      "unit": "vada",
+      "aliases": [
+        "Khameerikrit/Ufna hua channa dal ka vada"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP568",
+      "name": "Poshtik namak paras",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP569",
+      "name": "Soya chikki",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP570",
+      "name": "Besan bathua chilla/cheela",
+      "unit": "cheela",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP571",
+      "name": "Wheat flour and nuts ladoos (Atta nuts ladoos)",
+      "unit": "ladoo",
+      "aliases": [
+        "Atta nuts ladoos"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP573",
+      "name": "Gram flour and semolina dhokla (Besan suji dhokla)",
+      "unit": "piece",
+      "aliases": [
+        "Besan suji dhokla"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP574",
+      "name": "Atta dal burfi",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP575",
+      "name": "Soya roti",
+      "unit": "roti",
+      "aliases": [
+        "chapati",
+        "chapatti",
+        "phulka",
+        "roti"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP576",
+      "name": "Poshtik khichdi/khichri",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP577",
+      "name": "Namkeen daliya",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP578",
+      "name": "Sprouts upma",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP579",
+      "name": "Semolina idli (Suji/Rava idli)",
+      "unit": "idli",
+      "aliases": [
+        "Suji/Rava idli"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP580",
+      "name": "Poshtik chilla/cheela",
+      "unit": "cheela",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP604",
+      "name": "Stuffed bittergourd (dry) (Bharwa karela)",
+      "unit": "bowl",
+      "aliases": [
+        "Bharwa karela",
+        "dry"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP605",
+      "name": "Cauliflower potato canjee",
+      "unit": "glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP606",
+      "name": "Creamed spinach",
+      "unit": "small bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP607",
+      "name": "Mango milkshake with ice cream (Aam milkshake ice cream ke saath)",
+      "unit": "tall glass",
+      "aliases": [
+        "Aam milkshake ice cream ke saath"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP608",
+      "name": "Pineapple milkshake with ice cream (Ananas milkshake ice cream ke saath)",
+      "unit": "tall glass",
+      "aliases": [
+        "Ananas milkshake ice cream ke saath"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "BFP609",
+      "name": "Orange milkshake with ice cream (Narangi milkshake ice cream ke saath)",
+      "unit": "tall glass",
+      "aliases": [
+        "Narangi milkshake ice cream ke saath"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR001",
+      "name": "Woodapple juice (Bel ka sharbat)",
+      "unit": "glass",
+      "aliases": [
+        "Bel ka sharbat"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR002",
+      "name": "Sattu drink",
+      "unit": "glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR004",
+      "name": "Apple and honey sorbet (Seb aur shehad ka sharbat)",
+      "unit": "cup",
+      "aliases": [
+        "Seb aur shehad ka sharbat"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR005",
+      "name": "Thandai",
+      "unit": "glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR006",
+      "name": "Cucumber sharbat (Kheere ka sharbat)",
+      "unit": "glass",
+      "aliases": [
+        "Kheere ka sharbat"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR007",
+      "name": "Apple oats chia seed smoothie",
+      "unit": "glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR008",
+      "name": "Nannari sharbat",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR009",
+      "name": "Semolina milk drink (Thari kanji)",
+      "unit": "cup",
+      "aliases": [
+        "Thari kanji"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR010",
+      "name": "Saffron milk (Kesariya doodh)",
+      "unit": "glass",
+      "aliases": [
+        "Kesariya doodh"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR011",
+      "name": "Black rice kheer (Chak-hao kheer)",
+      "unit": "bowl",
+      "aliases": [
+        "Chak-hao kheer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR012",
+      "name": "Coconut kheer (Nariyal ki kheer)",
+      "unit": "bowl",
+      "aliases": [
+        "Nariyal ki kheer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR013",
+      "name": "Apple sago payasam (Seb aur sabudana ki kheer)",
+      "unit": "bowl",
+      "aliases": [
+        "Seb aur sabudana ki kheer"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR014",
+      "name": "Kesari bath",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR015",
+      "name": "Putharekulu",
+      "unit": "roll",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR016",
+      "name": "Mango malpua",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR017",
+      "name": "Mango vanilla custard",
+      "unit": "glass",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR018",
+      "name": "Kiwi granola pudding",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR019",
+      "name": "Oats burfi",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR020",
+      "name": "Lotus seed halwa (Kamal gattay ka halwa)",
+      "unit": "piece",
+      "aliases": [
+        "Kamal gattay ka halwa"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR021",
+      "name": "Amaranth ladoo (Rajgira ladoo)",
+      "unit": "ladoo",
+      "aliases": [
+        "Rajgira ladoo"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR022",
+      "name": "Chhena poda",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR023",
+      "name": "Sweet couscous dessert",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR024",
+      "name": "Sweetened yogurt (Shrikhand)",
+      "unit": "bowl",
+      "aliases": [
+        "Shrikhand",
+        "curd",
+        "dahi",
+        "yoghurt",
+        "yogurt"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR025",
+      "name": "Thickened sweetened milk (Rabri)",
+      "unit": "bowl",
+      "aliases": [
+        "Rabri"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR026",
+      "name": "Gram flour halwa (Besan halwa)",
+      "unit": "piece",
+      "aliases": [
+        "Besan halwa"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR027",
+      "name": "Prawn sandwich",
+      "unit": "sandwich",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR028",
+      "name": "Watercress sandwich",
+      "unit": "triangle",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR029",
+      "name": "Fish sandwich",
+      "unit": "sandwich",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR030",
+      "name": "Kidney bean sandwich with cottage cheese",
+      "unit": "triangle",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR031",
+      "name": "Finger millet biscuit (Ragi biscuit)",
+      "unit": "biscuit",
+      "aliases": [
+        "Ragi biscuit"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR032",
+      "name": "Buttermilk biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR033",
+      "name": "Lemon cookies",
+      "unit": "cookie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR034",
+      "name": "Sweet potato biscuit (Shakarkand ke biscuit)",
+      "unit": "biscuit",
+      "aliases": [
+        "Shakarkand ke biscuit"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR035",
+      "name": "Raspberry shortbread cookies",
+      "unit": "cookie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR036",
+      "name": "Pumpkin cookies",
+      "unit": "cookie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR037",
+      "name": "Greenpea cookies",
+      "unit": "cookie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR038",
+      "name": "Sunflower cookies",
+      "unit": "cookie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR039",
+      "name": "Cardamom cookies (Elaichi cookies)",
+      "unit": "cookie",
+      "aliases": [
+        "Elaichi cookies"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR040",
+      "name": "Hazelnut cookies",
+      "unit": "cookie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR041",
+      "name": "Milk cookies",
+      "unit": "cookie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR042",
+      "name": "Cranberry cookies",
+      "unit": "cookie",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR043",
+      "name": "Olive biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR045",
+      "name": "Tutti fruitti biscuit",
+      "unit": "biscuit",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR046",
+      "name": "Peach blueberry preserves",
+      "unit": "half-pints",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR047",
+      "name": "Pear preserves (Naashpati ka murabba)",
+      "unit": "half-pints",
+      "aliases": [
+        "Naashpati ka murabba"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR048",
+      "name": "Starfruit preserves",
+      "unit": "jar",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR049",
+      "name": "Gooseberry pickle (Amla ka achaar)",
+      "unit": "jar",
+      "aliases": [
+        "Amla ka achaar"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR050",
+      "name": "Lotus stem pickle (Kamal kakdi ka achar)",
+      "unit": "jar",
+      "aliases": [
+        "Kamal kakdi ka achar"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR051",
+      "name": "Date pickle (Khajoor ka achaar)",
+      "unit": "small bowl",
+      "aliases": [
+        "Khajoor ka achaar"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR052",
+      "name": "Garlic pickle (Lahasun ka achar)",
+      "unit": "jar",
+      "aliases": [
+        "Lahasun ka achar"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR053",
+      "name": "Fermented bamboo shoot pickle (Mesu pickle)",
+      "unit": "jar",
+      "aliases": [
+        "Mesu pickle"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR054",
+      "name": "Sweet peach pickle (Aadoo ka achaar)",
+      "unit": "jar",
+      "aliases": [
+        "Aadoo ka achaar"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR055",
+      "name": "Pickled mustard greens",
+      "unit": "jar",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR056",
+      "name": "Small onion pickle",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR057",
+      "name": "Green tomato pickle (Haray tamatar ka achaar)",
+      "unit": "jar",
+      "aliases": [
+        "Haray tamatar ka achaar"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR058",
+      "name": "Pickled cabbage",
+      "unit": "jar",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR059",
+      "name": "Coconut pickle (Nariyal ka aachar)",
+      "unit": "jar",
+      "aliases": [
+        "Nariyal ka aachar"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR060",
+      "name": "Potato pickle (Aloo ka achaar)",
+      "unit": "bowl",
+      "aliases": [
+        "Aloo ka achaar"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR061",
+      "name": "Mango murabba candy",
+      "unit": "candy",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR062",
+      "name": "Afghani chicken",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR063",
+      "name": "Fish orly",
+      "unit": "fillet",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR064",
+      "name": "Hariyali Fish Tikka",
+      "unit": "kebab",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR065",
+      "name": "Chicken manchurian",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR066",
+      "name": "Handi chicken",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR067",
+      "name": "Lemon chicken",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR068",
+      "name": "Lemon butter fish",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR069",
+      "name": "Baked eggs in tomato sauce",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR070",
+      "name": "Egg in a pepper",
+      "unit": "egg",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR071",
+      "name": "Spinach mushroom scrambled egg (Palak mushroom bhurji)",
+      "unit": "plate",
+      "aliases": [
+        "Palak mushroom bhurji"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR072",
+      "name": "Corn omelette/omlet",
+      "unit": "omelette",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR073",
+      "name": "Cajun chicken",
+      "unit": "chicken breast",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR074",
+      "name": "Paaner do pyaza",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR075",
+      "name": "Cabbage manchurian (Pattagobhi manchurian)",
+      "unit": "bowl",
+      "aliases": [
+        "Pattagobhi manchurian"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR076",
+      "name": "Gobi 65",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR077",
+      "name": "Paneer lababdar",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR078",
+      "name": "Roasted cauliflower steak",
+      "unit": "cauliflower steak",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR079",
+      "name": "Sauteed radishes with green beans",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR080",
+      "name": "Garlic chutney/Poondu chutney (Lahasun ki chutney)",
+      "unit": "small bowl",
+      "aliases": [
+        "Lahasun ki chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR081",
+      "name": "Schezwan chutney",
+      "unit": "box",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR083",
+      "name": "Onion chutney (Pyaaz ki chutney/Vengaya chutney)",
+      "unit": "cup",
+      "aliases": [
+        "Pyaaz ki chutney/Vengaya chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR085",
+      "name": "Dates chutney (Khajoor ki chutney)",
+      "unit": "small bowl",
+      "aliases": [
+        "Khajoor ki chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR086",
+      "name": "Chicken salad",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR087",
+      "name": "Macaroni salad",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR088",
+      "name": "Cabbage raita (Pattagobhi raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Pattagobhi raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR089",
+      "name": "Pomegranate raita (Anaar ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Anaar ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR090",
+      "name": "Onion raita (Pyaaz ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Pyaaz ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR091",
+      "name": "Green chilli raita (Hari mirch ka raita)",
+      "unit": "bowl",
+      "aliases": [
+        "Hari mirch ka raita"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR092",
+      "name": "Kale salad",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR093",
+      "name": "Spinach and paneer souffle",
+      "unit": "souffle dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR094",
+      "name": "Masala souffle",
+      "unit": "souffle dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR095",
+      "name": "Chicken and cheese souffle",
+      "unit": "souffle dish",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR096",
+      "name": "Tamarind chutney (Chintapandu pachadi/Puli chutney)",
+      "unit": "ml",
+      "aliases": [
+        "Chintapandu pachadi/Puli chutney"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR097",
+      "name": "Pav bhaji masala",
+      "unit": "gm",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR098",
+      "name": "Green chutney",
+      "unit": "glass jar",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR099",
+      "name": "Sago khitchdi/khichri (Sabudana khitchdi/khichri)",
+      "unit": "bowl",
+      "aliases": [
+        "Sabudana khitchdi/khichri"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR100",
+      "name": "Gram flour chilla/cheela (Besan chilla/cheela)",
+      "unit": "cheela",
+      "aliases": [
+        "Besan chilla/cheela"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR101",
+      "name": "Vegetable namkeen jave",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR102",
+      "name": "Khakhra",
+      "unit": "khakhra",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR103",
+      "name": "Moong bean dosa (Pesarattu)",
+      "unit": "pesarattu",
+      "aliases": [
+        "Pesarattu"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR104",
+      "name": "Methi thepla",
+      "unit": "thepla",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR105",
+      "name": "Rice puttu (Ari puttu)",
+      "unit": "puttu",
+      "aliases": [
+        "Ari puttu"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR106",
+      "name": "Buckwheat pancake (Khura)",
+      "unit": "pancake",
+      "aliases": [
+        "Khura"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR107",
+      "name": "Quinoa khichdi/khichri",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR108",
+      "name": "Khakhra chaat",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR110",
+      "name": "Banana appam",
+      "unit": "appam",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR111",
+      "name": "Veg manchurian",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR113",
+      "name": "Rice murukku",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR114",
+      "name": "Bhel puri",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR115",
+      "name": "Semolina dhokla (Suji/Rava dhokla)",
+      "unit": "plate",
+      "aliases": [
+        "Suji/Rava dhokla"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR116",
+      "name": "Spicy corn chaat",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR118",
+      "name": "Jackfruit fritters (Ponsa mulik/Kathal ka pakora)",
+      "unit": "mulik/fritter",
+      "aliases": [
+        "Ponsa mulik/Kathal ka pakora"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR119",
+      "name": "Banana chips (Kele ke chips)",
+      "unit": "bowl",
+      "aliases": [
+        "Kele ke chips"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR120",
+      "name": "Wheat cake",
+      "unit": "piece",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR121",
+      "name": "Mango cheesecake",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR122",
+      "name": "Carrot cake (Gajar ka cake)",
+      "unit": "slice",
+      "aliases": [
+        "Gajar ka cake"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR123",
+      "name": "Semolina cake (Suji/Rava cake)",
+      "unit": "square",
+      "aliases": [
+        "Suji/Rava cake"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR124",
+      "name": "Finger millet cake (Ragi cake)",
+      "unit": "slice",
+      "aliases": [
+        "Ragi cake"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR125",
+      "name": "Honey cake",
+      "unit": "slice",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR126",
+      "name": "Almond cardamom cake (Badam elaichi cake)",
+      "unit": "slice",
+      "aliases": [
+        "Badam elaichi cake"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR127",
+      "name": "Tutti frutti cake",
+      "unit": "cake",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR128",
+      "name": "Ham and Bean soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR129",
+      "name": "Whey soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR130",
+      "name": "Bottle gourd soup (Ghiya/Lauki soup)",
+      "unit": "bowl",
+      "aliases": [
+        "Ghiya/Lauki soup"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR131",
+      "name": "Baked potato soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR132",
+      "name": "Pumpkin soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR133",
+      "name": "Sweet corn soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR134",
+      "name": "Paneer soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR135",
+      "name": "Curried Cauliflower soup",
+      "unit": "cup",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR136",
+      "name": "Millet soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR137",
+      "name": "Lemon coriander soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR138",
+      "name": "Garlic soup",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR139",
+      "name": "Dal makhani",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR141",
+      "name": "Dalma",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR142",
+      "name": "Split bengal gram dal (Channa dal)",
+      "unit": "bowl",
+      "aliases": [
+        "Channa dal"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR143",
+      "name": "Horsegram dal (Kulthi dal)",
+      "unit": "bowl",
+      "aliases": [
+        "Kulthi dal"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR144",
+      "name": "Panchmel dal",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR145",
+      "name": "Dal dhokli",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR146",
+      "name": "Gujarati handvo",
+      "unit": "cake",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR147",
+      "name": "Sev (Omapodi/Karapusa)",
+      "unit": "plate",
+      "aliases": [
+        "Omapodi/Karapusa"
+      ],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR148",
+      "name": "Papdi",
+      "unit": "plate",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR151",
+      "name": "Jowar dosa",
+      "unit": "dosa",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR152",
+      "name": "Bread roll",
+      "unit": "bread roll",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR153",
+      "name": "Soya seekh kebab",
+      "unit": "kabab",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR154",
+      "name": "Classic seasoned black beans",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR155",
+      "name": "Maa chaane ki dal",
+      "unit": "bowl",
+      "aliases": [],
+      "servingWeightG": null
+    },
+    {
+      "foodCode": "OSR156",
+      "name": "Garlic chickpea soup (Lahasun aur chane ka shoraba)",
+      "unit": "soup bowl",
+      "aliases": [
+        "Lahasun aur chane ka shoraba"
+      ],
+      "servingWeightG": null
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "catalog_version": "indb-65f91911de09ebdb-serving-v2",
+  "importer_version": "2",
+  "source_file": "INDB.xlsx",
+  "source_sha256": "65f91911de09ebdb4b80c4a3dc3ff372a35420e05444239d8df8a42e8b5b9ecf",
+  "worksheet": "Nutrient Data",
+  "source_records": 1014,
+  "source_columns": 82,
+  "included": 917,
+  "excluded": 97,
+  "exclusion_reasons": {
+    "missing_or_invalid_serving_unit": 97,
+    "missing_or_invalid_unit_serving_energy_kcal": 82,
+    "missing_or_invalid_unit_serving_protein_g": 82,
+    "missing_or_invalid_unit_serving_carb_g": 82,
+    "missing_or_invalid_unit_serving_fat_g": 82,
+    "missing_or_invalid_unit_serving_fibre_g": 82,
+    "missing_or_invalid_unit_serving_sodium_mg": 82
+  },
+  "nutrient_basis": "per_serving",
+  "mapping": {
+    "energy_kcal": "unit_serving_energy_kcal",
+    "protein_g": "unit_serving_protein_g",
+    "carb_g": "unit_serving_carb_g",
+    "fat_g": "unit_serving_fat_g",
+    "fibre_g": "unit_serving_fibre_g",
+    "sodium_mg": "unit_serving_sodium_mg"
+  },
+  "serving_weight_policy": "Unknown. Serving labels are never parsed as grams.",
+  "base_columns_policy": "Not used: unqualified nutrient columns have no verified measurement basis in workbook metadata."
+}

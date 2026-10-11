@@ -1,0 +1,92 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function anonymous() { return request.auth != null && request.auth.token.firebase.sign_in_provider == 'anonymous'; }
+    function own(uid) { return anonymous() && request.auth.uid == uid; }
+    function policy() { return get(/databases/$(database)/documents/study/config).data; }
+    function text(v, max) { return v is string && v.size() > 0 && v.size() <= max; }
+    function optionalText(v, max) { return v is string && v.size() <= max; }
+    function fields(v, keys) { return v is map && v.keys().hasAll(keys) && v.keys().hasOnly(keys); }
+    function food(f) {
+      // String methods reject non-strings. Accessing each mandatory property also
+      // rejects missing keys. Inline checks keep worst-case rules below 1,000 expressions.
+      return f.name.matches('(?s).{1,200}') && f.unit.matches('(?s).{1,80}')
+        && f.quantity is number && f.quantity > 0 && f.quantity <= 100
+        && (f.source == 'INDB'
+          ? (f.keys().hasOnly(['source','foodCode','name','unit','quantity']) && f.foodCode.matches('[A-Za-z0-9_-]{1,40}'))
+          : (f.source == 'CUSTOM' && f.keys().hasOnly(['source','foodCode','name','unit','quantity','brand','preparation']) && f.foodCode == null && f.brand.matches('(?s).{0,100}') && f.preparation.matches('(?s).{0,300}')));
+    }
+    function itemAt(items, i) { return items.size() <= i || food(items[i]); }
+    function meal(m) {
+      return fields(m, ['skipped','entries','createdAt']) && m.createdAt == request.time && m.skipped is bool && m.entries is list && m.entries.size() <= 8
+        && (m.skipped ? m.entries.size() == 0 : m.entries.size() > 0)
+        && itemAt(m.entries,0) && itemAt(m.entries,1) && itemAt(m.entries,2) && itemAt(m.entries,3) && itemAt(m.entries,4)
+        && itemAt(m.entries,5) && itemAt(m.entries,6) && itemAt(m.entries,7);
+    }
+    function profile(p) {
+      return fields(p, ['age','sex','heightCm','weightKg','goal','diet','avoided','otherAvoided','pattern','activity'])
+        && p.age is int && p.age >= 16 && p.sex in ['male','female']
+        && p.heightCm is number && p.heightCm >= 80 && p.heightCm <= 250
+        && p.weightKg is number && p.weightKg >= 20 && p.weightKg <= 350
+        && p.goal in ['Weight loss','Weight maintenance','Weight gain']
+        && p.diet in ['Vegetarian','Eggetarian','Non-vegetarian','Vegan']
+        && p.avoided is list && p.avoided.size() >= 1 && p.avoided.size() <= 8
+        && p.avoided.toSet().size() == p.avoided.size()
+        && p.avoided.hasOnly(['Eggs','Dairy','Wheat/gluten','Peanuts','Tree nuts','Seafood','Other','None'])
+        && (!p.avoided.hasAny(['None']) || p.avoided.size() == 1)
+        && (p.avoided.hasAny(['Other']) ? text(p.otherAvoided,200) : p.otherAvoided == '')
+        && p.pattern in ['','2 meals per day','3 meals per day','4 meals per day','5 or more meals per day','Varies']
+        && p.activity in ['','Sedentary','Lightly active','Moderately active','Very active','Prefer not to answer'];
+    }
+    function minorApproved(uid, c, cfg) {
+      let grant = get(/databases/$(database)/documents/minorEligibility/$(uid)).data;
+      return cfg.minorsEnabled == true && text(cfg.minorApprovalReference,200) && text(cfg.minorProcedure,2000)
+        && text(cfg.minorAssentVersion,100) && text(cfg.guardianConsentVersion,100)
+        && c.assent == true && c.assentVersion == cfg.minorAssentVersion && c.guardianConsentVersion == cfg.guardianConsentVersion
+        && grant.approved == true && grant.approvalReference == cfg.minorApprovalReference
+        && grant.assentVersion == cfg.minorAssentVersion && grant.guardianConsentVersion == cfg.guardianConsentVersion
+        && grant.expiresAt is timestamp && grant.expiresAt > request.time;
+    }
+    function consent(c, age, uid, cfg) {
+      return fields(c,['read','voluntary','version','timestamp','assent','assentVersion','guardianConsentVersion'])
+        && c.read == true && c.voluntary == true && c.version == cfg.consentVersion && c.timestamp == request.time
+        && (age < 18 ? minorApproved(uid,c,cfg) : (c.assent == false && c.assentVersion == '' && c.guardianConsentVersion == ''));
+    }
+    function validSubmission(d, uid) {
+      let cfg = policy();
+      return cfg.collectionEnabled == true && text(cfg.institution,200) && text(cfg.contactEmail,200)
+        && text(cfg.retention,500) && text(cfg.withdrawal,1000) && text(cfg.ethicsStatus,500) && text(cfg.consentVersion,100)
+        && fields(d,['responseId','ownerUid','consent','profile','dayRepresentativeness','dayType','catalogVersion','schemaVersion','createdAt','accurate'])
+        && d.responseId == uid && d.ownerUid == uid && d.schemaVersion == 2 && d.createdAt == request.time && d.accurate == true
+        && d.catalogVersion == cfg.catalogVersion && profile(d.profile) && consent(d.consent,d.profile.age,uid,cfg)
+        && d.dayRepresentativeness in ['Very typical','Mostly typical','Somewhat typical','Unusual']
+        && d.dayType in ['Typical weekday','Typical weekend','Both are similar'];
+    }
+    function mealCreated(uid, name) { return getAfter(/databases/$(database)/documents/submissions/$(uid)/meals/$(name)).data.createdAt == request.time; }
+    match /study/config { allow get: if true; allow list, write: if false; }
+    match /minorEligibility/{uid} { allow get: if own(uid); allow list, write: if false; }
+    match /submissions/{uid} {
+      allow create: if own(uid) && validSubmission(request.resource.data, uid)
+        && mealCreated(uid,'breakfast') && mealCreated(uid,'lunch') && mealCreated(uid,'snacks') && mealCreated(uid,'dinner')
+        && getAfter(/databases/$(database)/documents/receipts/$(uid)).data.responseId == uid
+        && getAfter(/databases/$(database)/documents/receipts/$(uid)).data.createdAt == request.time;
+      allow read, update, delete: if false;
+      match /meals/{name} {
+        allow create: if own(uid) && name in ['breakfast','lunch','snacks','dinner']
+          && !exists(/databases/$(database)/documents/submissions/$(uid))
+          && getAfter(/databases/$(database)/documents/submissions/$(uid)).data.createdAt == request.time
+          && meal(request.resource.data);
+        allow read, update, delete: if false;
+      }
+    }
+    match /receipts/{uid} {
+      allow get: if own(uid);
+      allow create: if own(uid) && fields(request.resource.data,['responseId','createdAt'])
+        && request.resource.data.responseId == uid && request.resource.data.createdAt == request.time
+        && !exists(/databases/$(database)/documents/submissions/$(uid))
+        && getAfter(/databases/$(database)/documents/submissions/$(uid)).data.ownerUid == uid;
+      allow list, update, delete: if false;
+    }
+    match /{document=**} { allow read, write: if false; }
+  }
+}

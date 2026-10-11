@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env*
+!.env.example
+exports/
+data/raw/
+*service*account*.json
+*firebase-adminsdk*.json
+*-debug.log
+__pycache__/
+playwright-report/
+test-results/
+.firebase/
+*.local.json
+.tools/
+*.tsbuildinfo

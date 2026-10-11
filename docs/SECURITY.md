@@ -1,0 +1,19 @@
+# Security and privacy model
+
+The client uses anonymous authentication, and rules require `firebase.sign_in_provider == anonymous`. Each UID may create one immutable submission at its own document path. All submission gets, lists, updates and deletes are denied to ordinary clients. Unknown paths are denied. Nested keys, types, enum values, positive bounded quantities, text limits and every allowed array position are checked. The largest allowed shape is tested in the emulator.
+
+Profile metadata, four private meal documents, and the small receipt are atomic (six writes). Meal documents permit all eight entries to be validated within the per-operation rule evaluation budget. A receipt without a new matching submission is forbidden. An existing response cannot be overwritten on retry. Participants can get only their own receipt (UID + creation time), not answers or a count. Ambiguous network outcomes are checked against the server receipt before success is shown. The frontend revalidates policy and catalog immediately before writing; server rules are authoritative.
+
+The server requires integer ages ≥16 without a maximum. Minor writes additionally require active configured approval, exact assent/guardian versions and a trusted unexpired grant. Real-world identity, age and guardian evidence cannot be inferred by rules. The institution's external process remains essential. The UI's gate alone is not the security boundary.
+
+Server rules constrain structural integrity but do not certify a food code/name/unit against the 917-row catalog. Doing so through one Firestore get per item would exceed rule access limits. The client checks exact catalog membership, and privileged research joins quarantine nonmatching version/code/name/unit combinations. Treat all submitted data as untrusted research observations and review quality before optimization.
+
+Adult drafts use browser localStorage only after consent, with fixed seven-day expiry checked on load, success deletion and explicit discard confirmation. JavaScript cannot remove storage while the website is closed; expired data are removed when next opened. Minors' answers use memory only. Anonymous sign-in persistence uses Firebase's technical storage separately and is not cleared automatically, to preserve one-account/retry behavior. Browser clearing can create a new account. Do not promise perfect anonymity.
+
+CSV exports are admin-only scripts, not a public dashboard. Formula-like cells are neutralized to reduce spreadsheet injection. Errors are exported separately, with no silent invention of missing data. Protect exports through workstation access controls, approved storage and retention; they are ignored by Git. Admin SDK credentials bypass rules and must have appropriate IAM restrictions. Never add credentials to frontend code.
+
+Client rules do not prevent a human creating multiple anonymous accounts or guarantee spam prevention. Monitor quotas and billing, set budget alerts, consider App Check and controlled recruitment. Rules do not implement the study's deletion schedule: the institution must operate retention and withdrawal with privileged tools and audited procedures. Participant response references enable lookup without collecting contact fields in this website.
+
+Avoid collecting identifying information in custom food descriptions or Other foods. The UI warns against it, but content review is still needed. Do not include clinical diagnoses or other unnecessary sensitive attributes in derived exports. Sex is a nutritional calculation category, not a comprehensive gender measure.
+
+Rule limits were verified against the emulator and [Firebase rule structure documentation](https://firebase.google.com/docs/firestore/security/rules-structure). Withdrawal and retention procedures must delete both parent metadata and meal subcollections; deleting a Firestore parent alone does not delete its children.

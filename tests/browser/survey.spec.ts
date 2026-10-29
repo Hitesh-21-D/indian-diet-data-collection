@@ -56,7 +56,8 @@ test("complete survey, search, edit, custom food, skips, refresh, receipt and sa
     .getByRole("button", { name: "Can’t find your food? Add a custom food" })
     .click();
   await page.getByLabel("Food name", { exact: true }).fill("Family recipe");
-  await page.getByLabel("Quantity unit", { exact: true }).fill("bowl");
+  await page.getByLabel("Quantity unit", { exact: true }).selectOption("bowl");
+  await page.getByRole("spinbutton", { name: "Quantity in bowl" }).fill("1");
   await page.getByRole("button", { name: "Add Food", exact: true }).click();
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.getByLabel("I usually skip this meal").check();

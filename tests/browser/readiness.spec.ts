@@ -47,6 +47,49 @@ async function breakfast(page: Page) {
   await fits(page, "instructions");
 }
 
+test("custom unit dropdown guides quantity and preserves saved measurements", async ({
+  page,
+}) => {
+  await breakfast(page);
+  await page
+    .getByRole("button", { name: "Can’t find your food? Add a custom food" })
+    .click();
+  await page.getByLabel("Food name", { exact: true }).fill("Test custom drink");
+  const unit = page.getByRole("combobox", {
+    name: "Quantity unit",
+    exact: true,
+  });
+  await expect(page.getByRole("spinbutton")).toBeDisabled();
+  await page.getByRole("button", { name: "Add Food", exact: true }).click();
+  await expect(page.getByRole("alert")).toContainText("Choose a quantity unit");
+  await unit.selectOption("ml");
+  const amount = page.getByRole("spinbutton", { name: "Quantity in ml" });
+  await expect(amount).toHaveValue("");
+  await amount.fill("250");
+  await page.getByRole("button", { name: "Increase quantity" }).click();
+  await expect(amount).toHaveValue("260");
+  await page.getByRole("button", { name: "Decrease quantity" }).click();
+  await expect(amount).toHaveValue("250");
+  await fits(page, "custom-measured-unit");
+  await page.getByRole("button", { name: "Add Food", exact: true }).click();
+  await expect(
+    page.getByText("250 × ml · Custom food", { exact: true }),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Edit Test custom drink" }).click();
+  await expect(unit).toHaveValue("ml");
+  await expect(amount).toHaveValue("250");
+  await unit.selectOption("cup");
+  const cups = page.getByRole("spinbutton", { name: "Quantity in cup" });
+  await expect(cups).toHaveValue("");
+  await cups.fill("0.5");
+  await page.getByRole("button", { name: "Increase quantity" }).click();
+  await expect(cups).toHaveValue("0.75");
+  await page.getByRole("button", { name: "Save changes" }).click();
+  await expect(
+    page.getByText("0.75 × cup · Custom food", { exact: true }),
+  ).toBeVisible();
+});
+
 test("five or more creates five occasions, adds and removes a sixth, and submits separate meal names", async ({
   page,
 }) => {
@@ -92,7 +135,8 @@ test("five or more creates five occasions, adds and removes a sixth, and submits
   await page
     .getByLabel("Food name", { exact: true })
     .fill("Synthetic sixth-meal food");
-  await page.getByLabel("Quantity unit", { exact: true }).fill("bowl");
+  await page.getByLabel("Quantity unit", { exact: true }).selectOption("bowl");
+  await page.getByRole("spinbutton", { name: "Quantity in bowl" }).fill("1");
   await page.getByRole("button", { name: "Add Food", exact: true }).click();
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await expect(
@@ -166,9 +210,8 @@ test("touch search, long custom text, unsaved edit warning, review and narrow la
   await page
     .getByLabel("Food name", { exact: true })
     .fill("VeryLongHomemadeFood".repeat(10));
-  await page
-    .getByLabel("Quantity unit", { exact: true })
-    .fill("LargeHouseholdServingUnit".repeat(3));
+  await page.getByLabel("Quantity unit", { exact: true }).selectOption("cup");
+  await page.getByRole("spinbutton", { name: "Quantity in cup" }).fill("1.5");
   await page
     .getByLabel("Preparation (optional)")
     .fill("Test preparation ".repeat(15));

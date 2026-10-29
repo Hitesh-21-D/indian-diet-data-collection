@@ -1,3 +1,11 @@
+# Custom-food unit update — 29 October 2026
+
+Custom foods use a unit dropdown followed by a quantity control labelled with the selected unit. Buttons use unit-specific increments; fractions remain editable. Changing units clears the amount rather than converting it. Legacy custom units remain supported on existing entries. CUSTOM quantities in g/ml allow up to 10,000 consistently in the form, validation, Firestore rules and CSV export; other quantities retain the 100-unit limit. Household measures are not converted to weights or assigned nutrient values.
+
+Validation passed: TypeScript, ESLint, production build, 34 unit tests, 19 Firestore security tests, 7 Python pipeline tests and all 40 browser tests across desktop, Android-sized phone, 320 px phone, tablet and iPhone-sized WebKit. The phone screenshot was visually inspected. Browser tests cover missing-unit feedback, quantity increments, unit changes and saved measurements. Rules tests include maximum-size submissions with measured amounts. An initial expression-budget failure and dropdown label association issue were corrected before the final passing runs. Tests used synthetic local demo data; no production submissions were accessed. The build retains the existing nonfatal bundle-size warning.
+
+Deploy the updated Firestore rules before publishing the frontend, and use the updated exporter. These results describe local verification, not a completed production deployment.
+
 # Readiness audit — 11 October 2026
 
 ## Subsequent meal-flow revision

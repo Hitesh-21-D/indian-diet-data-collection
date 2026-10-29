@@ -1,6 +1,7 @@
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { Minus, Plus, Search, Trash2, Pencil } from "lucide-react";
 import { entrySchema, searchFoods, type Food, type FoodEntry } from "./model";
+import { customUnits, quantityLimit } from "./customUnits";
 
 function Highlight({ text, query }: { text: string; query: string }) {
   const index = text.toLowerCase().indexOf(query.trim().toLowerCase());
@@ -32,6 +33,13 @@ export default function FoodEditor({
   const [quantity, setQuantity] = useState("1");
   const [editing, setEditing] = useState<number | null>(null);
   const [error, setError] = useState("");
+  const unitOption = customUnits.find((unit) => unit.value === selected?.unit);
+  const quantityStep =
+    selected?.source === "CUSTOM" ? (unitOption?.step ?? 0.25) : 0.25;
+  const maximumQuantity = selected
+    ? quantityLimit(selected.source, selected.unit)
+    : 100;
+  const needsUnit = selected?.source === "CUSTOM" && !selected.unit;
   const selectedOption = useRef<HTMLLIElement>(null);
   useEffect(
     () => onPendingChange(selected !== null),
@@ -55,6 +63,10 @@ export default function FoodEditor({
     setError("");
   }
   function save() {
+    if (needsUnit) {
+      setError("Choose a quantity unit before adding this food.");
+      return;
+    }
     const result = entrySchema.safeParse({
       ...selected,
       quantity: Number(quantity),
@@ -236,17 +248,6 @@ export default function FoodEditor({
                       />
                     </label>
                     <label>
-                      Quantity unit
-                      <input
-                        placeholder="e.g. cup, piece, g, ml"
-                        maxLength={80}
-                        value={selected.unit}
-                        onChange={(e) =>
-                          setSelected({ ...selected, unit: e.target.value })
-                        }
-                      />
-                    </label>
-                    <label>
                       Preparation (optional)
                       <input
                         maxLength={300}
@@ -262,19 +263,56 @@ export default function FoodEditor({
                   </div>
                 </>
               )}
+              {selected.source === "CUSTOM" && (
+                <div className="custom-unit">
+                  <label htmlFor={`${id}-unit`}>Quantity unit</label>
+                  <select
+                    id={`${id}-unit`}
+                    value={selected.unit}
+                    onChange={(e) => {
+                      setSelected({ ...selected, unit: e.target.value });
+                      // A different unit is a new measurement, not a conversion.
+                      setQuantity("");
+                      setError("");
+                    }}
+                  >
+                    <option value="" disabled>
+                      Select a unit
+                    </option>
+                    {selected.unit && !unitOption && (
+                      <option value={selected.unit}>
+                        {selected.unit} (previously entered)
+                      </option>
+                    )}
+                    {customUnits.map((unit) => (
+                      <option key={unit.value} value={unit.value}>
+                        {unit.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
               <div className="quantity-row">
                 <label htmlFor={`${id}-quantity`}>
                   Quantity
-                  {selected.source === "INDB" && (
-                    <small> in {selected.unit}</small>
-                  )}
+                  {selected.unit && <small> in {selected.unit}</small>}
                 </label>
                 <div className="quantity">
                   <button
                     aria-label="Decrease quantity"
+                    disabled={
+                      needsUnit || !quantity || Number(quantity) <= quantityStep
+                    }
                     onClick={() =>
                       setQuantity(
-                        String(Math.max(0.25, Number(quantity) - 0.25)),
+                        String(
+                          Math.max(
+                            quantityStep,
+                            Number(
+                              (Number(quantity) - quantityStep).toFixed(3),
+                            ),
+                          ),
+                        ),
                       )
                     }
                   >
@@ -285,16 +323,26 @@ export default function FoodEditor({
                     type="number"
                     inputMode="decimal"
                     min="0.001"
-                    max="100"
+                    max={maximumQuantity}
                     step="any"
+                    disabled={needsUnit}
+                    aria-describedby={`${id}-quantity-hint`}
                     value={quantity}
                     onChange={(e) => setQuantity(e.target.value)}
                   />
                   <button
                     aria-label="Increase quantity"
+                    disabled={needsUnit}
                     onClick={() =>
                       setQuantity(
-                        String(Math.min(100, Number(quantity) + 0.25)),
+                        String(
+                          Math.min(
+                            maximumQuantity,
+                            Number(
+                              (Number(quantity) + quantityStep).toFixed(3),
+                            ),
+                          ),
+                        ),
                       )
                     }
                   >
@@ -302,8 +350,13 @@ export default function FoodEditor({
                   </button>
                 </div>
               </div>
-              <p className="hint">
-                Fractions are welcome, such as 0.5 or 1.25.
+              <p className="hint" id={`${id}-quantity-hint`}>
+                {needsUnit
+                  ? "Select a unit, then enter the amount you consumed."
+                  : selected.source === "CUSTOM" &&
+                      (selected.unit === "g" || selected.unit === "ml")
+                    ? `Enter the amount in ${selected.unit}, for example 250. Use a known or measured amount.`
+                    : "Enter how many of the selected unit you consumed. Fractions such as 0.5 or 1.25 are welcome."}
               </p>
               <div className="inline-actions">
                 <button className="primary" onClick={save}>

@@ -1,5 +1,7 @@
 # GitHub Pages deployment
 
+For the custom-unit dropdown update (29 October 2026), deploy `firestore.rules` before the frontend using `npx firebase deploy --only firestore:rules --project indian-diet-research`. CUSTOM gram/ml quantities now allow up to 10,000; all other quantities retain the 100-unit ceiling. Deploying the frontend first would cause amounts above 100 g/ml to fail submission. Keep the local CSV exporter updated as well. Existing records and older clients remain compatible.
+
 The project is published at https://hitesh-21-d.github.io/indian-diet-data-collection/ from https://github.com/Hitesh-21-D/indian-diet-data-collection. The steps below also describe redeployment. Local edits do not change the published site until they are pushed and the Pages workflow completes.
 
 For the separate-eating-occasion release (schema version 3), deploy the updated `firestore.rules` **before** publishing the frontend: `npx firebase deploy --only firestore:rules --project indian-diet-research`. These rules accept both the old version 2 and new version 3 formats, so existing tabs continue to work. No production record migration or study/config change is required. Then push, pass Verify study and dispatch Deploy GitHub Pages. Use the updated export script for both record formats.

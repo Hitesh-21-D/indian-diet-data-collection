@@ -74,6 +74,26 @@ afterAll(async () => {
   await env.cleanup();
 });
 describe("participant security", () => {
+  it("permits measured custom quantities and rejects amounts above their unit limit", async () => {
+    const data = payload();
+    const food = {
+      source: "CUSTOM" as const,
+      foodCode: null,
+      name: "Test drink",
+      unit: "ml",
+      quantity: 250,
+      brand: "",
+      preparation: "",
+    };
+    data.meals.breakfast.entries = [food];
+    food.quantity = 10001;
+    await assertFails(commit(client(), data));
+    food.quantity = 250;
+    food.unit = "cup";
+    await assertFails(commit(client(), data));
+    food.unit = "ml";
+    await assertSucceeds(commit(client(), data));
+  });
   it("allows one atomic anonymous submission; denies all reads, listing, mutations and repeat creates", async () => {
     const db = client();
     await assertSucceeds(commit(db));
@@ -233,9 +253,14 @@ describe("participant security", () => {
     badLast.meals.breakfast.entries[7].quantity = 0;
     await assertFails(commit(client(), badLast));
   });
-  it.each([1, 4, 8])(
-    "accepts maximum bounded entries across %s meals",
-    async (count) => {
+  it.each([
+    [1, "legacy"],
+    [4, "legacy"],
+    [8, "legacy"],
+    [8, "g"],
+  ] as const)(
+    "accepts maximum bounded entries across %s meals with %s units",
+    async (count, unit) => {
       const d = payload();
       if (count === 8) {
         for (const key of ["extra1", "extra2", "extra3", "extra4"] as const) {
@@ -249,8 +274,8 @@ describe("participant security", () => {
           source: "CUSTOM",
           foodCode: null,
           name: "x".repeat(200),
-          unit: "u".repeat(80),
-          quantity: 100,
+          unit: unit === "g" ? "g" : "u".repeat(80),
+          quantity: unit === "g" ? 10000 : 100,
           brand: "b".repeat(100),
           preparation: "p".repeat(300),
         }));

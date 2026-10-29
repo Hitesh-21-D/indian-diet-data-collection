@@ -11,17 +11,18 @@ service cloud.firestore {
       // String methods reject non-strings. Accessing each mandatory property also
       // rejects missing keys. Inline checks keep worst-case rules below 1,000 expressions.
       return f.name.matches('(?s).{1,200}') && f.unit.matches('(?s).{1,80}')
-        && f.quantity is number && f.quantity > 0 && f.quantity <= 100
+        && f.quantity is number && f.quantity > 0
         && (f.source == 'INDB'
-          ? (f.keys().hasOnly(['source','foodCode','name','unit','quantity']) && f.foodCode.matches('[A-Za-z0-9_-]{1,40}'))
-          : (f.source == 'CUSTOM' && f.keys().hasOnly(['source','foodCode','name','unit','quantity','brand','preparation']) && f.foodCode == null && f.brand.matches('(?s).{0,100}') && f.preparation.matches('(?s).{0,300}')));
+          ? (f.quantity <= 100 && f.keys().hasOnly(['source','foodCode','name','unit','quantity']) && f.foodCode.matches('[A-Za-z0-9_-]{1,40}'))
+          : (f.source == 'CUSTOM' && f.quantity <= {'g':10000, 'ml':10000}.get(f.unit,100) && f.keys().hasOnly(['source','foodCode','name','unit','quantity','brand','preparation']) && f.foodCode == null && f.brand.matches('(?s).{0,100}') && f.preparation.matches('(?s).{0,300}')));
     }
     function itemAt(items, i) { return items.size() <= i || food(items[i]); }
     function meal(m, version) {
-      return (version == 3 ? (fields(m, ['label','skipped','entries','createdAt']) && text(m.label,80)) : fields(m, ['skipped','entries','createdAt'])) && m.createdAt == request.time && m.skipped is bool && m.entries is list && m.entries.size() <= 8
-        && (m.skipped ? m.entries.size() == 0 : m.entries.size() > 0)
-        && itemAt(m.entries,0) && itemAt(m.entries,1) && itemAt(m.entries,2) && itemAt(m.entries,3) && itemAt(m.entries,4)
-        && itemAt(m.entries,5) && itemAt(m.entries,6) && itemAt(m.entries,7);
+      let entries = m.entries;
+      return (version == 3 ? (fields(m, ['label','skipped','entries','createdAt']) && text(m.label,80)) : fields(m, ['skipped','entries','createdAt'])) && m.createdAt == request.time && m.skipped is bool && entries is list && entries.size() <= 8
+        && (m.skipped ? entries.size() == 0 : entries.size() > 0)
+        && itemAt(entries,0) && itemAt(entries,1) && itemAt(entries,2) && itemAt(entries,3) && itemAt(entries,4)
+        && itemAt(entries,5) && itemAt(entries,6) && itemAt(entries,7);
     }
     function profile(p) {
       return fields(p, ['age','sex','heightCm','weightKg','goal','diet','avoided','otherAvoided','pattern','activity'])

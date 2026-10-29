@@ -48,7 +48,8 @@ def export_records(records, output):
                 if not isinstance(entries, list) or len(entries) > 8 or not isinstance(meal['skipped'], bool) or (meal['skipped'] != (len(entries) == 0)): raise ValueError(f'Invalid meal: {meal_name}')
                 for i, food in enumerate(entries):
                     quantity = food['quantity']
-                    if isinstance(quantity, bool) or not isinstance(quantity, (int, float)) or not math.isfinite(quantity) or not 0 < quantity <= 100: raise ValueError('Invalid food quantity')
+                    limit = 10000 if food.get('source') == 'CUSTOM' and food.get('unit') in ('g', 'ml') else 100
+                    if isinstance(quantity, bool) or not isinstance(quantity, (int, float)) or not math.isfinite(quantity) or not 0 < quantity <= limit: raise ValueError('Invalid food quantity')
                     source = food['source']
                     if source not in ('INDB', 'CUSTOM') or not isinstance(food['name'], str) or not food['name'].strip() or not isinstance(food['unit'], str) or not food['unit'].strip(): raise ValueError('Invalid food source, name or unit')
                     if (source == 'CUSTOM' and food['foodCode'] is not None) or (source == 'INDB' and not food['foodCode']): raise ValueError('Invalid food code')

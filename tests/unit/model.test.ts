@@ -17,6 +17,33 @@ import { readDraft, saveDraft, RETENTION_MS } from "../../src/draft";
 import { policy, response } from "../fixtures";
 import catalogJson from "../../public/data/indb_food_catalog.json";
 const catalog = catalogJson as Catalog;
+
+it("allows measured custom amounts while retaining household and catalog limits", () => {
+  const food = {
+    source: "CUSTOM",
+    foodCode: null,
+    name: "Test",
+    unit: "ml",
+    quantity: 250,
+    brand: "",
+    preparation: "",
+  };
+  expect(entrySchema.safeParse(food).success).toBe(true);
+  expect(
+    entrySchema.safeParse({ ...food, unit: "g", quantity: 10000 }).success,
+  ).toBe(true);
+  for (const change of [{ quantity: 10001 }, { quantity: 0 }, { unit: "cup" }])
+    expect(entrySchema.safeParse({ ...food, ...change }).success).toBe(false);
+  expect(
+    entrySchema.safeParse({
+      source: "INDB",
+      foodCode: "TEST",
+      name: "Test",
+      unit: "g",
+      quantity: 250,
+    }).success,
+  ).toBe(false);
+});
 describe("age and nutritional sex field", () => {
   it.each([16, 17, 18, 71, 120, 200])(
     "accepts whole age %s without a maximum",

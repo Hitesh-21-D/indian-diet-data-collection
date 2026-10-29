@@ -13,6 +13,20 @@ def record():
     return {'schemaVersion':2,'responseId':'synthetic','catalogVersion':catalog['version'],'consent':{'version':'test','assent':False},'profile':{'age':101,'sex':'female'},'meals':{'breakfast':{'skipped':False,'entries':[{'source':'INDB','foodCode':'ASC001','name':'Hot tea (Garam Chai)','quantity':1.25,'unit':'tea cup'},{'source':'CUSTOM','foodCode':None,'name':'=danger()','quantity':.5,'unit':'cup','brand':'','preparation':''}]},**{m:{'skipped':True,'entries':[]} for m in ['lunch','snacks','dinner']}}}
 
 class PipelineTests(unittest.TestCase):
+    def test_measured_custom_quantities(self):
+        for unit, quantity, accepted in [('ml',250,True),('g',10000,True),('ml',10001,False),('bowl',250,False)]:
+            r = record()
+            r['meals']['breakfast']['entries'][1].update(unit=unit, quantity=quantity)
+            with tempfile.TemporaryDirectory() as tmp:
+                path = Path(tmp)
+                report = export_records([('synthetic',r)],path)
+                self.assertEqual(report['participants'], int(accepted))
+                if accepted:
+                    with (path/'custom_foods.csv').open() as f:
+                        row = list(csv.DictReader(f))[0]
+                        self.assertEqual(float(row['quantity']), quantity)
+                        self.assertEqual(row['serving_unit'], unit)
+
     def test_separate_occasions_export_with_legacy_compatibility(self):
         r = record()
         r['schemaVersion'] = 3

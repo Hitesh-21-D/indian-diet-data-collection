@@ -562,6 +562,9 @@ mark {
   gap: 12px;
   flex-wrap: wrap;
 }
+.custom-unit {
+  margin: 16px 0;
+}
 .quantity-row small {
   display: inline;
 }

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { quantityLimit } from "./customUnits";
 
 export const mealKeys = ["breakfast", "lunch", "snacks", "dinner"] as const;
 export const occasionKeys = [
@@ -76,28 +77,38 @@ export const quantitySchema = z
   .gt(0, "Enter an amount greater than zero.")
   .max(100, "Use 100 units or fewer.");
 const shortText = (max: number) => z.string().trim().min(1).max(max);
-export const entrySchema = z.discriminatedUnion("source", [
-  z
-    .object({
-      source: z.literal("INDB"),
-      foodCode: shortText(40),
-      name: shortText(200),
-      unit: shortText(80),
-      quantity: quantitySchema,
-    })
-    .strict(),
-  z
-    .object({
-      source: z.literal("CUSTOM"),
-      foodCode: z.null(),
-      name: shortText(200),
-      unit: shortText(80),
-      quantity: quantitySchema,
-      brand: z.string().trim().max(100),
-      preparation: z.string().trim().max(300),
-    })
-    .strict(),
-]);
+export const entrySchema = z
+  .discriminatedUnion("source", [
+    z
+      .object({
+        source: z.literal("INDB"),
+        foodCode: shortText(40),
+        name: shortText(200),
+        unit: shortText(80),
+        quantity: quantitySchema,
+      })
+      .strict(),
+    z
+      .object({
+        source: z.literal("CUSTOM"),
+        foodCode: z.null(),
+        name: shortText(200),
+        unit: shortText(80),
+        quantity: z.number().finite().gt(0).max(10000),
+        brand: z.string().trim().max(100),
+        preparation: z.string().trim().max(300),
+      })
+      .strict(),
+  ])
+  .superRefine((entry, ctx) => {
+    const limit = quantityLimit(entry.source, entry.unit);
+    if (entry.quantity > limit)
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["quantity"],
+        message: `Use ${limit} units or fewer.`,
+      });
+  });
 export type FoodEntry = z.infer<typeof entrySchema>;
 export const mealSchema = z
   .object({ skipped: z.boolean(), entries: z.array(entrySchema).max(8) })

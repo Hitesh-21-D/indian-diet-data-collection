@@ -90,7 +90,7 @@ test("custom unit dropdown guides quantity and preserves saved measurements", as
   ).toBeVisible();
 });
 
-test("five or more creates five occasions, adds and removes a sixth, and submits separate meal names", async ({
+test("five or more creates five occasions, keeps meal names read-only, adds and removes a sixth, and submits", async ({
   page,
 }) => {
   await breakfast(page);
@@ -110,6 +110,9 @@ test("five or more creates five occasions, adds and removes a sixth, and submits
     await expect(page.getByLabel("Meal name", { exact: true })).toHaveValue(
       names[i],
     );
+    await expect(
+      page.getByLabel("Meal name", { exact: true }),
+    ).not.toBeEditable();
     await page.getByLabel("I usually skip this meal").check();
     if (i < names.length - 1)
       await page.getByRole("button", { name: "Continue", exact: true }).click();
@@ -117,7 +120,12 @@ test("five or more creates five occasions, adds and removes a sixth, and submits
   await page
     .getByRole("button", { name: "Add another meal", exact: true })
     .click();
-  await page.getByLabel("Meal name", { exact: true }).fill("Late-night snack");
+  await expect(
+    page.getByLabel("Meal name", { exact: true }),
+  ).not.toBeEditable();
+  await expect(page.getByLabel("Meal name", { exact: true })).toHaveValue(
+    "Meal 6",
+  );
   page.once("dialog", (dialog) => dialog.accept());
   await page
     .getByRole("button", { name: "Remove this meal", exact: true })
@@ -128,7 +136,12 @@ test("five or more creates five occasions, adds and removes a sixth, and submits
   await page
     .getByRole("button", { name: "Add another meal", exact: true })
     .click();
-  await page.getByLabel("Meal name", { exact: true }).fill("Late-night snack");
+  await expect(
+    page.getByLabel("Meal name", { exact: true }),
+  ).not.toBeEditable();
+  await expect(page.getByLabel("Meal name", { exact: true })).toHaveValue(
+    "Meal 6",
+  );
   await page
     .getByRole("button", { name: "Can’t find your food? Add a custom food" })
     .click();
@@ -150,14 +163,14 @@ test("five or more creates five occasions, adds and removes a sixth, and submits
     .selectOption("Typical weekday");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await expect(
-    page.getByRole("heading", { name: "Late-night snack", exact: true }),
+    page.getByRole("heading", { name: "Meal 6", exact: true }),
   ).toBeVisible();
   const saved = await page.evaluate(
     () =>
       JSON.parse(localStorage.getItem("everyday-diet-study:draft:v2")!).draft,
   );
   expect(saved.mealOrder).toHaveLength(6);
-  expect(saved.meals[saved.mealOrder[5]].label).toBe("Late-night snack");
+  expect(saved.meals[saved.mealOrder[5]].label).toBe("Meal 6");
   await page
     .getByLabel(
       "I confirm that these answers describe my usual eating habits as accurately as I can remember.",

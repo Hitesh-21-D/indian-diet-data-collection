@@ -824,9 +824,9 @@ export default function App() {
                     <p className="hint">
                       Count snacks or drinks taken at separate times as eating
                       occasions. Your dietary pattern sets the starting number
-                      of meals. You can rename or remove them and add more after
-                      the last meal. Changing this answer keeps meals with foods
-                      already entered.
+                      of meals. You can remove meals and add more after the last
+                      meal. Changing this answer keeps meals with foods already
+                      entered.
                     </p>
                   </>
                 )}
@@ -918,25 +918,12 @@ export default function App() {
                         id="meal-name"
                         aria-describedby="meal-name-hint"
                         value={draft.meals[mealKey].label}
-                        maxLength={80}
-                        onChange={(e) =>
-                          setDraft((d) => ({
-                            ...d,
-                            accurate: false,
-                            meals: {
-                              ...d.meals,
-                              [mealKey]: {
-                                ...d.meals[mealKey],
-                                label: e.target.value,
-                              },
-                            },
-                          }))
-                        }
+                        readOnly
                       />
                     </label>
                     <p className="hint" id="meal-name-hint">
-                      Use a name such as breakfast, afternoon snack, or
-                      late-night meal. Record each eating occasion separately.
+                      Meal names are fixed. Record each eating occasion
+                      separately.
                     </p>
                     <FoodEditor
                       key={mealKey}
